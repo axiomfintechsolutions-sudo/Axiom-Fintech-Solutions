@@ -631,9 +631,8 @@ function initStickySubNav() {
         if (active) {
           navLinks.forEach(l => l.classList.remove('active'));
           active.link.classList.add('active');
-
-          /* Scroll link into view in sub-nav */
-          active.link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          
+          /* REMOVED: scrollIntoView was causing the page jump */
         }
       }
     });
@@ -644,7 +643,6 @@ function initStickySubNav() {
 
   sections.forEach(({ section }) => observer.observe(section));
 }
-
 
 /* ══════════════════════════════════════════════════════════
    12. SERVICES HERO TAGS — Filter toggle
