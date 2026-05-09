@@ -3,218 +3,470 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="icon" href="Assets/axiomlogo.jpg" type="image/png">
-  <title>Axiom Business Tech — Finance, Data & Technology</title>
-  <meta name="description" content="Axiom Business Tech combines accounting expertise, data analytics, and technology to help businesses grow with financial clarity." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ═══ SEO META TAGS ═══ -->
+  <title>Axiom Fintech Solutions | Finance · Technology · Innovation</title>
+  <meta name="description" content="Axiom Fintech Solutions delivers expert financial modeling, bookkeeping, data analytics, and business automation services in Pakistan. Helping SMEs and startups scale smarter." />
+  <meta name="keywords" content="fintech solutions Pakistan, financial modeling Pakistan, bookkeeping services Punjab, data analytics Pakistan, Power BI Pakistan, business automation, IFRS accounting, SME finance Pakistan, Axiom Fintech Solutions" />
+  <meta name="author" content="Axiom Fintech Solutions" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.axiomfintechsolutions.com/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.axiomfintechsolutions.com/" />
+  <meta property="og:title"       content="Axiom Fintech Solutions | Finance · Technology · Innovation" />
+  <meta property="og:description" content="Expert financial modeling, bookkeeping, data analytics and business automation for SMEs and startups across Pakistan." />
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&auto=format&fit=crop" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Axiom Fintech Solutions" />
+  <meta name="twitter:description" content="Finance · Technology · Innovation — Pakistan's modern fintech solutions firm." />
+  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&auto=format&fit=crop" />
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&q=80&auto=format&fit=crop" />
+  <link rel="apple-touch-icon"       href="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&q=80&auto=format&fit=crop" />
+
+  <!-- ═══ FONTS ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ═══ SCHEMA MARKUP ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Axiom Fintech Solutions",
+    "description": "Financial modeling, bookkeeping, data analytics and business automation services in Pakistan.",
+    "url": "https://www.axiomfintechsolutions.com",
+    "email": "axiomfintechsolutions@gmail.com",
+    "areaServed": "Pakistan",
+    "founder": {
+      "@type": "Person",
+      "name": "Awais Tahir",
+      "jobTitle": "Founder & CEO"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/axiomfintechsolutions",
+      "https://www.facebook.com/axiomfintechsolutions",
+      "https://www.instagram.com/axiomfintechsolutions"
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" id="navLogo">
-        <img src="Assets/axiomlogonew-removebg-preview.png" alt="Axiom" class="logo-img" />
-        <span class="logo-name">Axiom Business Tech</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="industries.html" class="nav-link">Industries</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="contact.html" class="nav-link nav-cta">Contact Us</a></li>
-      </ul>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html" class="mob-link">Home</a>
-      <a href="about.html" class="mob-link">About</a>
-      <a href="services.html" class="mob-link">Services</a>
-      <a href="industries.html" class="mob-link">Industries</a>
-      <a href="portfolio.html" class="mob-link">Portfolio</a>
-      <a href="contact.html" class="mob-link mob-cta">Contact Us</a>
-    </div>
+<!-- ═══════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<header class="navbar" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="Axiom Fintech Solutions — Home">
+      <img src="assets/axiomlogonew.png" alt="Axiom Fintech Solutions logo" class="logo-img" />
+      <span class="logo-name">Axiom Fintech Solutions</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"      class="nav-link active">Home</a></li>
+      <li><a href="about.html"      class="nav-link">About</a></li>
+      <li><a href="services.html"   class="nav-link">Services</a></li>
+      <li><a href="industries.html" class="nav-link">Industries</a></li>
+      <li><a href="portfolio.html"  class="nav-link">Portfolio</a></li>
+      <li><a href="contact.html"    class="nav-link nav-cta">Get Started</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80&auto=format&fit=crop" alt="Modern city buildings" class="hero-bg-img" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">Finance · Data · Technology</div>
-      <h1 class="hero-title">Transforming <span class="hero-accent">Financial Data</span> Into Business Growth</h1>
-      <p class="hero-sub">We help businesses maintain accurate financial records and turn data into actionable insights using modern tools and systems.</p>
-      <div class="hero-actions">
-        <a href="services.html" class="btn btn-white">Our Services</a>
-        <a href="contact.html" class="btn btn-outline-white">Get in Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="stat-val" data-count="50" data-suffix="+">50+</span>
-          <span class="stat-label">Clients Served</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="stat-val" data-count="6" data-suffix="">6</span>
-          <span class="stat-label">Core Services</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="stat-val" data-count="100" data-suffix="%">100%</span>
-          <span class="stat-label">Data Accuracy</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="stat-val" data-count="3" data-suffix="">3</span>
-          <span class="stat-label">Countries</span>
-        </div>
-      </div>
-    </div>
-    <a href="#about" class="hero-scroll-cue" aria-label="Scroll down">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </a>
-  </section>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html"      class="mob-link">Home</a>
+    <a href="about.html"      class="mob-link">About</a>
+    <a href="services.html"   class="mob-link">Services</a>
+    <a href="industries.html" class="mob-link">Industries</a>
+    <a href="portfolio.html"  class="mob-link">Portfolio</a>
+    <a href="contact.html"    class="mob-link mob-cta">Get Started ✦</a>
+  </div>
+</header>
 
-  <!-- ABOUT -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual reveal">
-          <div class="about-img-wrap">
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&auto=format&fit=crop" alt="Finance team" class="about-img" />
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero section">
+
+  <!-- Background -->
+  <div class="hero-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80&auto=format&fit=crop" alt="" class="hero-bg-img" loading="eager" />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-content">
+
+    <span class="hero-badge" aria-label="Company tagline">
+      ✦ Finance · Technology · Innovation
+    </span>
+
+    <h1 class="hero-title">
+      Precision Finance,<br />
+      <span class="hero-accent">Powered by Data</span>
+    </h1>
+
+    <p class="hero-sub">
+      Axiom Fintech Solutions delivers expert financial modeling, bookkeeping,
+      data analytics, and business automation — helping Pakistani businesses
+      make smarter decisions and scale with confidence.
+    </p>
+
+    <div class="hero-actions">
+      <a href="contact.html"  class="btn btn-dark">Start a Project ✦</a>
+      <a href="portfolio.html" class="btn btn-outline-white">View Our Work</a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-stats" aria-label="Key statistics">
+      <div class="hero-stat">
+        <span class="stat-val" data-count="50" data-suffix="+">50+</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <span class="stat-val" data-count="98" data-suffix="%">98%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <span class="stat-val" data-count="6" data-suffix="+">6+</span>
+        <span class="stat-label">Industries Served</span>
+      </div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <span class="stat-val" data-count="3" data-suffix="×">3×</span>
+        <span class="stat-label">Avg. Reporting Speed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <a href="#about" class="hero-scroll-cue" aria-label="Scroll down">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </a>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT (Home Preview)
+════════════════════════════════════════════════════════ -->
+<section id="about" class="about-section section" aria-label="About Axiom Fintech Solutions">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Visual column -->
+      <div class="about-visual reveal">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&auto=format&fit=crop" alt="Axiom Fintech Solutions office and team" class="about-img" loading="lazy" />
+        </div>
+        <div class="about-mini-cards">
+          <div class="about-mini-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=70&auto=format&fit=crop" alt="Financial analysis at work" loading="lazy" />
+            <span>Financial Modeling</span>
           </div>
-          <div class="about-mini-cards">
-            <div class="about-mini-card">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=70&auto=format&fit=crop" alt="Analytics" />
-              <span>Data Analytics</span>
+          <div class="about-mini-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=70&auto=format&fit=crop" alt="Data dashboard on screen" loading="lazy" />
+            <span>Data Analytics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div class="about-text reveal reveal-delay-1">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">
+          A Modern Fintech Firm Built for Pakistan's Growth Story
+        </h2>
+
+        <p class="section-body">
+          <strong>Axiom Fintech Solutions</strong> was founded on a simple conviction: Pakistani businesses deserve the same level of financial intelligence that global enterprises rely on — precise, data-driven, and built for scale.
+        </p>
+        <p class="section-body">
+          We combine deep accounting expertise with modern technology tools to help SMEs, startups, and growing companies get full clarity on their numbers — and act on them with confidence.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feat">
+            <span class="feat-icon">📊</span>
+            <div>
+              <strong>Finance-First Thinking</strong>
+              <p>Every solution we build starts with understanding your business economics, not just your data.</p>
             </div>
-            <div class="about-mini-card">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=70&auto=format&fit=crop" alt="Dashboards" />
-              <span>BI Dashboards</span>
+          </div>
+          <div class="about-feat">
+            <span class="feat-icon">⚡</span>
+            <div>
+              <strong>Technology-Powered Delivery</strong>
+              <p>Excel, Power BI, Python, and automation tools combined to deliver insights at speed.</p>
+            </div>
+          </div>
+          <div class="about-feat">
+            <span class="feat-icon">🎯</span>
+            <div>
+              <strong>Results You Can Measure</strong>
+              <p>We track outcomes — faster reporting, cost savings, accuracy gains — not just deliverables.</p>
             </div>
           </div>
         </div>
-        <div class="about-text reveal reveal-delay-1">
-          <div class="section-label">Who We Are</div>
-          <h2 class="section-title">Finance Meets Technology — Built for Growth</h2>
-          <p class="section-body">Axiom Business Tech is a modern business solutions company that blends <strong>ACCA-level accounting expertise</strong> with cutting-edge data analytics and technology.</p>
-          <p class="section-body">From accurate bookkeeping to real-time Power BI dashboards and Python automation, we deliver integrated solutions that replace guesswork with data-driven confidence.</p>
-          <div class="about-features">
-            <div class="about-feat"><span class="feat-icon">🏦</span><div><strong>Finance-First</strong><p>Built on a strong ACCA foundation with real-world financial expertise.</p></div></div>
-            <div class="about-feat"><span class="feat-icon">⚙️</span><div><strong>Tech-Enabled</strong><p>We automate, visualise and build systems that scale with your business.</p></div></div>
-            <div class="about-feat"><span class="feat-icon">🌍</span><div><strong>Global Standard</strong><p>Serving clients in Pakistan, UK, USA and beyond with professional deliverables.</p></div></div>
-          </div>
-          <a href="about.html" class="btn btn-dark">Our Story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="about.html"    class="btn btn-dark">Our Full Story</a>
+          <a href="contact.html"  class="btn btn-outline-gold">Work With Us</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SERVICES -->
-  <section class="section services-section" id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">What We Do</div>
-        <h2 class="section-title">Our Core Services</h2>
-        <p class="section-subtitle">Six focused services built on accounting expertise, modern data tools, and smart automation.</p>
-      </div>
-      <div class="services-grid">
-        <a href="services.html#bookkeeping" class="service-card reveal reveal-delay-1">
-          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80&auto=format&fit=crop" alt="Bookkeeping" /><div class="service-card-overlay"></div></div>
-          <div class="service-card-body">
-            <div class="service-icon-wrap"><img src="https://cdn.simpleicons.org/quickbooks/2CA01C" alt="QuickBooks" class="tool-logo" /></div>
-            <h3>Bookkeeping & Accounting</h3>
-            <p>Accurate records, reconciliations, and month-end closing — maintained with ACCA-standard precision.</p>
-            <span class="service-tag">Finance</span>
-          </div>
-          <div class="service-card-arrow">→</div>
-        </a>
-        <a href="services.html#reporting" class="service-card reveal reveal-delay-2">
-          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80&auto=format&fit=crop" alt="Reporting" /><div class="service-card-overlay"></div></div>
-          <div class="service-card-body">
-            <div class="service-icon-wrap"><img src="https://img.icons8.com/fluency/96/microsoft-excel-2019.png" alt="Excel" class="tool-logo" /></div>
-            <h3>Financial Reporting</h3>
-            <p>P&amp;L statements, balance sheets, and cash flow reports — clear, professional and timely.</p>
-            <span class="service-tag">Finance</span>
-          </div>
-          <div class="service-card-arrow">→</div>
-        </a>
-        <a href="services.html#analytics" class="service-card reveal reveal-delay-3">
-          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop" alt="Analytics" /><div class="service-card-overlay"></div></div>
-          <div class="service-card-body">
-            <div class="service-icon-wrap"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="tool-logo" /></div>
-            <h3>Data Analytics</h3>
-            <p>Turn raw business data into actionable insights with trend analysis and data storytelling.</p>
-            <span class="service-tag">Analytics</span>
-          </div>
-          <div class="service-card-arrow">→</div>
-        </a>
-        <a href="services.html#powerbi" class="service-card reveal reveal-delay-1">
-          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Power BI" /><div class="service-card-overlay"></div></div>
-          <div class="service-card-body">
-            <div class="service-icon-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="tool-logo" /></div>
-            <h3>Power BI Dashboards</h3>
-            <p>Interactive real-time dashboards connecting your data sources and presenting KPIs visually.</p>
-            <span class="service-tag">Analytics</span>
-          </div>
-          <div class="service-card-arrow">→</div>
-        </a>
-        <a href="services.html#sql" class="service-card reveal reveal-delay-2">
-          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80&auto=format&fit=crop" alt="SQL" /><div class="service-card-overlay"></div></div>
-          <div class="service-card-body">
-            <div class="service-icon-wrap"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" class="tool-logo" /></div>
-            <h3>SQL & Data Processing</h3>
-            <p>Database design, cleaning, ETL pipelines — making your data reliable and query-ready.</p>
-            <span class="service-tag">Technology</span>
-          </div>
-          <div class="service-card-arrow">→</div>
-        </a>
-        <a href="services.html#automation" class="service-card reveal reveal-delay-3">
-          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80&auto=format&fit=crop" alt="Automation" /><div class="service-card-overlay"></div></div>
-          <div class="service-card-body">
-            <div class="service-icon-wrap"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="tool-logo" /></div>
-            <h3>Python Automation</h3>
-            <p>Automate repetitive workflows — report generation, data extraction, scheduled tasks.</p>
-            <span class="service-tag">Technology</span>
-          </div>
-          <div class="service-card-arrow">→</div>
-        </a>
-      </div>
-      <div class="section-cta reveal"><a href="services.html" class="btn btn-dark">View All Services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- INDUSTRIES -->
-  <section class="section industries-section" id="industries">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Who We Serve</div>
-        <h2 class="section-title">Industries We Work With</h2>
-        <p class="section-subtitle">Delivering finance, data and technology solutions across diverse sectors worldwide.</p>
-      </div>
-      <div class="industries-grid">
-        <a href="industries.html#realestate" class="industry-card reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" alt="Real Estate" /><div class="industry-overlay"><h3>Real Estate</h3><p>Property management reporting, NOI tracking, rent roll analysis</p></div></a>
-        <a href="industries.html#ecommerce" class="industry-card reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80&auto=format&fit=crop" alt="E-Commerce" /><div class="industry-overlay"><h3>E-Commerce</h3><p>Sales analytics, inventory reporting, customer segmentation</p></div></a>
-        <a href="industries.html#professional" class="industry-card reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80&auto=format&fit=crop" alt="Professional Services" /><div class="industry-overlay"><h3>Professional Services</h3><p>Monthly management accounts, payroll journals, P&amp;L reporting</p></div></a>
-        <a href="industries.html#startups" class="industry-card reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80&auto=format&fit=crop" alt="Startups" /><div class="industry-overlay"><h3>Startups &amp; SMEs</h3><p>Financial cleanup, chart of accounts setup, investor-ready reports</p></div></a>
-        <a href="industries.html#retail" class="industry-card reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&auto=format&fit=crop" alt="Retail" /><div class="industry-overlay"><h3>Retail &amp; FMCG</h3><p>POS data pipelines, inventory analytics, sales dashboards</p></div></a>
-        <a href="industries.html#healthcare" class="industry-card reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600&q=80&auto=format&fit=crop" alt="Healthcare" /><div class="industry-overlay"><h3>Healthcare</h3><p>Revenue cycle reporting, expense tracking, compliance dashboards</p></div></a>
-        <a href="industries.html#logistics" class="industry-card reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&auto=format&fit=crop" alt="Logistics" /><div class="industry-overlay"><h3>Logistics &amp; Supply Chain</h3><p>Route cost analysis, fleet expense tracking, operational BI</p></div></a>
-        <a href="industries.html#manufacturing" class="industry-card reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600&q=80&auto=format&fit=crop" alt="Manufacturing" /><div class="industry-overlay"><h3>Manufacturing</h3><p>Cost of goods analysis, production reporting, variance tracking</p></div></a>
-      </div>
-      <div class="section-cta reveal"><a href="industries.html" class="btn btn-dark">Explore All Industries <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     SERVICES (Home Preview)
+════════════════════════════════════════════════════════ -->
+<section id="services" class="services-section section" aria-label="Our services">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">
+        Core Services That Move<br />Your Business Forward
+      </h2>
+      <p class="section-subtitle">
+        From day-one bookkeeping to investor-ready financial models — we cover every layer of your financial operations.
+      </p>
     </div>
-  </section>
 
-  <!-- TOOLS -->
+    <div class="services-grid">
+
+      <!-- Card 1 — Financial Modeling -->
+      <a href="services.html#financial-modeling" class="service-card reveal">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80&auto=format&fit=crop" alt="Financial modeling and forecasting" loading="lazy" />
+          <div class="service-card-overlay"></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-icon-wrap">
+            <img src="assets/icon-excel.png" alt="Excel" class="tool-logo" />
+          </div>
+          <h3>Financial Modeling &amp; Forecasting</h3>
+          <p>Dynamic 3-statement models, scenario analysis, and investor-ready projections that turn data into decisions.</p>
+          <span class="service-tag">Finance</span>
+        </div>
+        <div class="service-card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <!-- Card 2 — Bookkeeping -->
+      <a href="services.html#bookkeeping" class="service-card reveal reveal-delay-1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80&auto=format&fit=crop" alt="Bookkeeping and accounting services" loading="lazy" />
+          <div class="service-card-overlay"></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-icon-wrap">
+            <img src="assets/icon-quickbooks.png" alt="QuickBooks" class="tool-logo" />
+          </div>
+          <h3>Bookkeeping &amp; Accounting</h3>
+          <p>Clean, reconciled books every month — whether you're starting fresh or untangling years of messy records.</p>
+          <span class="service-tag">Accounting</span>
+        </div>
+        <div class="service-card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <!-- Card 3 — Data Analytics -->
+      <a href="services.html#data-analytics" class="service-card reveal reveal-delay-2">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop" alt="Data analytics and Power BI dashboards" loading="lazy" />
+          <div class="service-card-overlay"></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-icon-wrap">
+            <img src="assets/icon-powerbi.png" alt="Power BI" class="tool-logo" />
+          </div>
+          <h3>Data Analytics &amp; Dashboards</h3>
+          <p>Power BI and Python-driven dashboards that surface the KPIs your leadership team needs — in real time.</p>
+          <span class="service-tag">Analytics</span>
+        </div>
+        <div class="service-card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <!-- Card 4 — Business Automation -->
+      <a href="services.html#automation" class="service-card reveal">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Business process automation" loading="lazy" />
+          <div class="service-card-overlay"></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-icon-wrap">
+            <img src="assets/icon-automate.png" alt="Power Automate" class="tool-logo" />
+          </div>
+          <h3>Business Process Automation</h3>
+          <p>Automate AP workflows, report generation, and data pipelines — cut manual hours and eliminate errors.</p>
+          <span class="service-tag">Automation</span>
+        </div>
+        <div class="service-card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <!-- Card 5 — Reporting -->
+      <a href="services.html#reporting" class="service-card reveal reveal-delay-1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80&auto=format&fit=crop" alt="Financial reporting and management accounts" loading="lazy" />
+          <div class="service-card-overlay"></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-icon-wrap">
+            <img src="assets/icon-excel.png" alt="Reporting" class="tool-logo" />
+          </div>
+          <h3>Management Reporting</h3>
+          <p>IFRS-aligned management accounts and Board Packs that give leadership a crystal-clear financial picture.</p>
+          <span class="service-tag">Reporting</span>
+        </div>
+        <div class="service-card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <!-- Card 6 — Strategy -->
+      <a href="services.html#strategy" class="service-card reveal reveal-delay-2">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80&auto=format&fit=crop" alt="Business strategy and advisory" loading="lazy" />
+          <div class="service-card-overlay"></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-icon-wrap">
+            <img src="assets/icon-strategy.png" alt="Strategy" class="tool-logo" />
+          </div>
+          <h3>Business Strategy &amp; Advisory</h3>
+          <p>From pricing models to expansion plans — financial strategy grounded in real data, not gut feeling.</p>
+          <span class="service-tag">Strategy</span>
+        </div>
+        <div class="service-card-arrow" aria-hidden="true">→</div>
+      </a>
+
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="services.html" class="btn btn-outline-gold">Explore All Services</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     INDUSTRIES (Home Preview)
+════════════════════════════════════════════════════════ -->
+<section id="industries" class="industries-section section" aria-label="Industries we serve">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Industries</span>
+      <h2 class="section-title">Deep Expertise Across<br />Pakistan's Key Sectors</h2>
+      <p class="section-subtitle">
+        We bring sector-specific knowledge so you get solutions built for your industry — not generic templates.
+      </p>
+    </div>
+
+    <div class="industries-grid">
+
+      <a href="industries.html#manufacturing" class="industry-card reveal">
+        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600&q=80&auto=format&fit=crop" alt="Manufacturing industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Manufacturing</h3>
+          <p>Cost accounting, production analytics, and variance analysis for factories and industrial firms.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#retail" class="industry-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&auto=format&fit=crop" alt="Retail and FMCG industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Retail &amp; FMCG</h3>
+          <p>Sales analytics, inventory management models, and multi-outlet financial tracking.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#tech" class="industry-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80&auto=format&fit=crop" alt="Technology and SaaS industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Technology &amp; SaaS</h3>
+          <p>SaaS metrics, investor reporting, deferred revenue schedules, and ARR modeling.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#construction" class="industry-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80&auto=format&fit=crop" alt="Construction industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Construction</h3>
+          <p>Project costing, AP automation, cash flow forecasting for contractors and developers.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#ecommerce" class="industry-card reveal">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80&auto=format&fit=crop" alt="E-Commerce industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>E-Commerce</h3>
+          <p>SKU profitability, return rate analysis, and marketplace analytics for online sellers.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#healthcare" class="industry-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600&q=80&auto=format&fit=crop" alt="Healthcare industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Healthcare</h3>
+          <p>Revenue cycle analysis, operational cost modeling, and clinic financial management.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#realestate" class="industry-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" alt="Real Estate industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Real Estate</h3>
+          <p>Project feasibility models, rental yield analysis, and developer cash flow planning.</p>
+        </div>
+      </a>
+
+      <a href="industries.html#services" class="industry-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&auto=format&fit=crop" alt="Professional Services industry" loading="lazy" />
+        <div class="industry-overlay">
+          <h3>Professional Services</h3>
+          <p>Billing efficiency, utilization tracking, and profitability dashboards for service firms.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="industries.html" class="btn btn-outline-gold">All Industries</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TOOLS WE USE
+════════════════════════════════════════════════════════ -->
   <section class="section tools-section" id="tools">
     <div class="container">
       <div class="section-header reveal">
@@ -235,300 +487,450 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section class="section portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Our Work</div>
-        <h2 class="section-title">Recent Case Studies</h2>
-        <p class="section-subtitle">Real projects. Measurable results. Delivered on time.</p>
-      </div>
-      <div class="portfolio-grid">
-        <a href="portfolio.html#project1" class="portfolio-card reveal reveal-delay-1">
-          <div class="portfolio-card-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop" alt="Power BI Dashboard" /><div class="portfolio-card-overlay"><span class="portfolio-view">View Case Study →</span></div></div>
-          <div class="portfolio-card-body">
-            <div class="portfolio-tags"><span class="p-tag">Power BI</span><span class="p-tag">Analytics</span></div>
-            <h3>Property Management Financial Dashboard</h3>
-            <p>Real-time Power BI dashboard tracking rent, expenses & NOI across 40+ units for a UK property manager. Reduced reporting time by 85%.</p>
-            <div class="portfolio-result"><span>↓ 85% reporting time</span><span>40+ units tracked</span></div>
-          </div>
-        </a>
-        <a href="portfolio.html#project2" class="portfolio-card reveal reveal-delay-2">
-          <div class="portfolio-card-img"><img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&q=80&auto=format&fit=crop" alt="Automation" /><div class="portfolio-card-overlay"><span class="portfolio-view">View Case Study →</span></div></div>
-          <div class="portfolio-card-body">
-            <div class="portfolio-tags"><span class="p-tag">Python</span><span class="p-tag">Automation</span></div>
-            <h3>Automated Monthly Reporting System</h3>
-            <p>Python pipeline that pulls, formats and emails financial reports automatically each month — replacing 2+ days of manual work.</p>
-            <div class="portfolio-result"><span>2 days saved monthly</span><span>Zero manual effort</span></div>
-          </div>
-        </a>
-        <a href="portfolio.html#project3" class="portfolio-card reveal reveal-delay-3">
-          <div class="portfolio-card-img"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80&auto=format&fit=crop" alt="Bookkeeping" /><div class="portfolio-card-overlay"><span class="portfolio-view">View Case Study →</span></div></div>
-          <div class="portfolio-card-body">
-            <div class="portfolio-tags"><span class="p-tag">Accounting</span><span class="p-tag">SQL</span></div>
-            <h3>SME Financial Cleanup & Restructure</h3>
-            <p>Cleaned 2 years of disorganised books for a startup, restructured chart of accounts and built a SQL-backed reporting model from scratch.</p>
-            <div class="portfolio-result"><span>2 years reconciled</span><span>Audit-ready books</span></div>
-          </div>
-        </a>
-      </div>
-      <div class="section-cta reveal"><a href="portfolio.html" class="btn btn-dark">View All Case Studies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-    </div>
-  </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Client Words</div>
-        <h2 class="section-title">What Our Clients Say</h2>
-        <p class="section-subtitle">Real feedback from businesses we have helped grow with better financial systems.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Axiom completely transformed our financial reporting. We went from spending 3 days a month on reports to having everything automated and ready overnight. The Power BI dashboard is something our entire team uses daily."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80&auto=format&fit=crop&facepad=3" alt="James Whitmore" class="testimonial-avatar" />
-            <div><strong>James Whitmore</strong><span>Property Manager, UK</span></div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Our books were a mess when we came to Axiom. Two years of transactions cleaned up in weeks. For the first time ever we had accurate financials and could actually understand our business position. Incredible work."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Sarah Malik" class="testimonial-avatar" />
-            <div><strong>Sarah Malik</strong><span>Founder, Tech Startup</span></div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-3">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The Python automation pipeline Awais built saves us over 16 hours every single month. The reports are cleaner, more accurate, and delivered without us lifting a finger. Best investment we have made in our operations."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Daniel Carter" class="testimonial-avatar" />
-            <div><strong>Daniel Carter</strong><span>Director, Service Business</span></div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Working with Axiom felt like having an in-house finance team without the overhead. Their data analytics work uncovered patterns we had completely missed. Revenue is up 22% since implementing their recommendations."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Ayesha Rahman" class="testimonial-avatar" />
-            <div><strong>Ayesha Rahman</strong><span>CEO, E-Commerce Brand</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ═══════════════════════════════════════════════════════
+     PORTFOLIO (Home Preview)
+════════════════════════════════════════════════════════ -->
+<section id="portfolio" class="portfolio-section section" aria-label="Portfolio preview">
+  <div class="container">
 
-  <!-- FAQ -->
-  <section class="section faq-section" id="faq">
-    <div class="container">
-      <div class="faq-inner">
-        <div class="faq-left reveal">
-          <div class="section-label">FAQ</div>
-          <h2 class="section-title">Common Questions</h2>
-          <p class="section-body">Can not find what you are looking for? Reach out directly and we will answer within 24 hours.</p>
-          <a href="contact.html" class="btn btn-dark" style="margin-top:24px">Ask Us Anything <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="section-header reveal">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title">Results That Speak<br />for Themselves</h2>
+      <p class="section-subtitle">
+        Real projects, real numbers. See how we've helped businesses across Pakistan transform their financial operations.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- Portfolio Card 1 -->
+      <a href="portfolio.html" class="portfolio-card reveal">
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop" alt="Financial model project" loading="lazy" />
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-view">View Case Study</span>
+          </div>
         </div>
-        <div class="faq-right reveal reveal-delay-1">
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">Do you work with international clients?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="faq-a">Yes — we currently serve clients in Pakistan, the UK, the USA, and other countries. All our services are fully remote and we can work across any time zone.</div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-tags">
+            <span class="p-tag">Financial Modeling</span>
+            <span class="p-tag">Excel</span>
           </div>
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">What accounting software do you work with?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="faq-a">We work with QuickBooks, Xero, Excel, Google Sheets, and can adapt to other platforms. We can also set up a system from scratch if you do not have one yet.</div>
+          <h3>Financial Model &amp; Forecasting — Pakistani SME</h3>
+          <p>Built a dynamic 3-year financial model that secured a bank loan and improved forecast accuracy by 38%.</p>
+          <div class="portfolio-result">
+            <span>↑38% Accuracy</span>
+            <span>3× Faster Reporting</span>
+            <span>PKR 2.4M Saved</span>
           </div>
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">How long does a typical project take?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="faq-a">It depends on scope. A Power BI dashboard typically takes 1-2 weeks. A financial cleanup project can take 2-4 weeks depending on the volume of records. We give you a clear timeline in our proposal before starting.</div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 2 -->
+      <a href="portfolio.html" class="portfolio-card reveal reveal-delay-1">
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&q=80&auto=format&fit=crop" alt="Power BI dashboard project" loading="lazy" />
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-view">View Case Study</span>
           </div>
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">Is Axiom right for small businesses or startups?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="faq-a">Absolutely — most of our clients are startups and SMEs. We design our solutions to be scalable and cost-effective, so you get enterprise-quality work at a price that makes sense for your stage of growth.</div>
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-tags">
+            <span class="p-tag">Power BI</span>
+            <span class="p-tag">Analytics</span>
           </div>
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">Do you offer ongoing monthly services?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="faq-a">Yes — many clients engage us on a monthly retainer for bookkeeping, financial reporting, and dashboard maintenance. We can also do one-off projects if that suits you better.</div>
+          <h3>Sales Intelligence Dashboard — FMCG Distributor</h3>
+          <p>Connected 5-region sales data into a live Power BI dashboard, driving a 22% revenue uplift in 90 days.</p>
+          <div class="portfolio-result">
+            <span>↑22% Revenue</span>
+            <span>60% Faster Insights</span>
+            <span>5 Regions</span>
           </div>
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">What makes Axiom different from a regular accountant?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="faq-a">A regular accountant handles numbers. We handle numbers AND the technology around them — building automated workflows, interactive dashboards, and data pipelines that make your financial operations smarter and faster.</div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 3 -->
+      <a href="portfolio.html" class="portfolio-card reveal reveal-delay-2">
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80&auto=format&fit=crop" alt="IFRS reporting project" loading="lazy" />
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-view">View Case Study</span>
+          </div>
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-tags">
+            <span class="p-tag">IFRS Reporting</span>
+            <span class="p-tag">SaaS</span>
+          </div>
+          <h3>IFRS-Compliant Management Accounts — Tech Startup</h3>
+          <p>Rebuilt a SaaS startup's entire reporting stack to IFRS standards — helping them close a Series A round.</p>
+          <div class="portfolio-result">
+            <span>100% IFRS Compliant</span>
+            <span>Series A Secured</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="portfolio.html" class="btn btn-outline-gold">See All 6 Case Studies</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════ -->
+<section class="testimonials-section section" aria-label="Client testimonials">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">Client Feedback</span>
+      <h2 class="section-title">Trusted by Businesses<br />Across Pakistan</h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Axiom built us a financial model that our bank accepted on the first submission. The scenario analysis alone saved us weeks of back-and-forth. Truly professional work."
+        </p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Ahmed Raza" class="testimonial-avatar" loading="lazy" />
+          <div>
+            <strong>Ahmed Raza</strong>
+            <span>CEO, Raza Manufacturing Co., Lahore</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="contact-left reveal">
-          <div class="section-label">Get In Touch</div>
-          <h2 class="section-title">Let us Work Together</h2>
-          <p class="section-body">Tell us about your business and what you need. We will respond within 24 hours with a clear plan.</p>
-          <div class="contact-details">
-            <div class="contact-detail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:axiombusinesstech831@gmail.com">axiombusinesstech831@gmail.com</a></div>
-            <div class="contact-detail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Punjab, Pakistan · Serving Globally</span></div>
-          </div>
-          <div class="contact-socials">
-            <a href="https://linkedin.com/company/axiombusinesstech831" target="_blank" class="contact-social" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="https://facebook.com/axiombusinesstech831" target="_blank" class="contact-social" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-            <a href="https://instagram.com/axiombusinesstech831" target="_blank" class="contact-social" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Our books were a disaster — 18 months unreconciled. Axiom cleaned everything up, redesigned our chart of accounts, and gave us SOPs so it never happens again. Exceptional."
+        </p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Sana Mirza" class="testimonial-avatar" loading="lazy" />
+          <div>
+            <strong>Sana Mirza</strong>
+            <span>Director, Mirza Retail Group, Faisalabad</span>
           </div>
         </div>
-        <div class="contact-right reveal reveal-delay-1">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group"><label>First Name *</label><input type="text" placeholder="John" required /></div>
-              <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Smith" required /></div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">
+          "The Power BI dashboard Axiom built for us changed how we run our distribution business. Real-time data by region, by rep, by SKU — we've never had this clarity before."
+        </p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Tariq Mehmood" class="testimonial-avatar" loading="lazy" />
+          <div>
+            <strong>Tariq Mehmood</strong>
+            <span>MD, Punjab FMCG Distributors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Axiom's IFRS-compliant reports were a game-changer during our fundraise. Investors commented specifically on the quality of our financial data room. We couldn't have done it without them."
+        </p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&auto=format&fit=crop&facepad=3" alt="Zara Khalid" class="testimonial-avatar" loading="lazy" />
+          <div>
+            <strong>Zara Khalid</strong>
+            <span>Co-Founder, Kaabil SaaS, Islamabad</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ (Home)
+════════════════════════════════════════════════════════ -->
+<section class="faq-section section" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="faq-inner">
+
+      <!-- Left — sticky label -->
+      <div class="faq-left reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Common Questions,<br />Direct Answers</h2>
+        <p class="section-subtitle" style="margin-top:16px;">
+          Not finding your answer? <a href="contact.html" style="color:var(--clr-accent);">Drop us a message</a> — we respond within 24 hours.
+        </p>
+      </div>
+
+      <!-- Right — accordion -->
+      <div class="faq-right reveal reveal-delay-1">
+
+        <div class="faq-list">
+
+          <div class="faq-item open">
+            <button class="faq-q" aria-expanded="true">
+              What types of businesses do you work with?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a">
+              We work with SMEs, startups, and growing businesses across Pakistan — primarily in manufacturing, retail, FMCG, technology, construction, and e-commerce. Whether you're a solo founder needing your first model or a 50-person company restructuring your finance function, we can help.
             </div>
-            <div class="form-group"><label>Email Address *</label><input type="email" placeholder="john@company.com" required /></div>
-            <div class="form-group"><label>Company Name</label><input type="text" placeholder="Your Company Ltd." /></div>
-            <div class="form-group"><label>Service Interested In *</label>
-              <select required>
-                <option value="" disabled selected>Select a service...</option>
-                <option>Bookkeeping &amp; Accounting</option>
-                <option>Financial Reporting</option>
-                <option>Data Analytics</option>
-                <option>Power BI Dashboards</option>
-                <option>SQL &amp; Data Processing</option>
-                <option>Python Automation</option>
-                <option>Other / Not Sure Yet</option>
-              </select>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              How long does a typical project take?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a">
+              It depends on scope. A financial model typically takes 5–10 working days. A bookkeeping cleanup can range from 1 week to 4 weeks depending on how many months need reconciling. Power BI dashboards usually take 1–3 weeks. We'll give you a clear timeline upfront before any work begins.
             </div>
-            <div class="form-group"><label>Message *</label><textarea rows="4" placeholder="Tell us about your business and what you need help with..." required></textarea></div>
-            <button type="submit" class="btn btn-dark btn-full">Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-          </form>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Do you work remotely or on-site?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a">
+              We work fully remotely and serve clients across all of Pakistan. Our process is built for remote collaboration — secure file sharing, regular video calls, and clear documentation at every stage. Physical meetings can be arranged for clients in Punjab on request.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What does a project with Axiom look like step by step?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a">
+              We follow a four-step process: (1) Discovery call to understand your needs, (2) Scoping document with timeline and deliverables, (3) Delivery with check-ins at key milestones, (4) Handover with documentation and training if needed. No surprises, no scope creep.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Can Axiom help with FBR tax filings?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a">
+              We prepare your books and financial records to be fully FBR-compliant and audit-ready. For direct FBR tax filing submissions, we work in coordination with a licensed tax consultant — we'll connect you with the right partner and ensure your underlying data is clean and accurate.
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-       <div class="footer-brand">
-  <h2 class="footer-brand-name">Axiom Business Tech</h2>
-  <p>Finance, Data and Technology — Built for Growing Businesses.</p>
-          <div class="footer-socials">
-            <a href="https://linkedin.com/company/axiombusinesstech831" target="_blank" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="mailto:axiombusinesstech831@gmail.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-            <a href="https://instagram.com/axiombusinesstech831" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT SECTION (Home — quick CTA)
+════════════════════════════════════════════════════════ -->
+<section id="contact" class="contact-section section" aria-label="Contact us">
+  <div class="container">
+    <div class="contact-inner">
+
+      <!-- Left — info -->
+      <div class="reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">
+          Ready to Transform<br />Your Financials?
+        </h2>
+        <p class="section-body">
+          Whether you need a financial model built this week or a full finance function overhaul — let's talk. We respond to every inquiry within 24 hours.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:axiomfintechsolutions@gmail.com">axiomfintechsolutions@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Punjab, Pakistan</span>
           </div>
         </div>
-        <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></div>
-        <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#bookkeeping">Bookkeeping</a></li><li><a href="services.html#reporting">Financial Reporting</a></li><li><a href="services.html#analytics">Data Analytics</a></li><li><a href="services.html#powerbi">Power BI</a></li><li><a href="services.html#automation">Automation</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:axiombusinesstech831@gmail.com">axiombusinesstech831@gmail.com</a></li><li><span>Punjab, Pakistan</span></li><li><span>Serving Globally</span></li></ul></div>
+
+        <div class="contact-socials">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/axiomfintechsolutions" class="contact-social" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/axiomfintechsolutions" class="contact-social" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/axiomfintechsolutions" class="contact-social" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© 2025 Axiom Business Tech. All rights reserved.</span><span>Finance · Data · Technology</span></div>
+
+      <!-- Right — quick form -->
+      <div class="contact-form reveal reveal-delay-1">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="home-name">Your Name</label>
+              <input id="home-name" name="name" type="text" placeholder="Awais Tahir" required />
+            </div>
+            <div class="form-group">
+              <label for="home-email">Email Address</label>
+              <input id="home-email" name="email" type="email" placeholder="you@company.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="home-service">Service Needed</label>
+            <select id="home-service" name="service">
+              <option value="">Select a service…</option>
+              <option>Financial Modeling &amp; Forecasting</option>
+              <option>Bookkeeping &amp; Accounting</option>
+              <option>Data Analytics &amp; Power BI</option>
+              <option>Business Process Automation</option>
+              <option>Management Reporting (IFRS)</option>
+              <option>Business Strategy &amp; Advisory</option>
+              <option>Not sure — I need advice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="home-message">Brief description of your project</label>
+            <textarea id="home-message" name="message" rows="4" placeholder="Tell us about your business and what you need help with…" required></textarea>
+          </div>
+          <button type="submit" id="formSubmit" class="btn btn-dark btn-full">
+            Send Message ✦
+          </button>
+          <p style="font-size:12px; color:var(--clr-subtle); text-align:center; margin-top:14px;">
+            We respond within 24 hours · No spam, ever
+          </p>
+        </form>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    // MOBILE MENU
-    var hamburger = document.getElementById('hamburgerBtn');
-    var mobileMenu = document.getElementById('mobileMenu');
-    if (hamburger && mobileMenu) {
-      hamburger.onclick = function(e) {
-        e.stopPropagation();
-        var open = mobileMenu.style.display === 'flex';
-        mobileMenu.style.display = open ? 'none' : 'flex';
-        hamburger.classList.toggle('open', !open);
-      };
-      mobileMenu.querySelectorAll('a').forEach(function(a) {
-        a.onclick = function() { mobileMenu.style.display = 'none'; hamburger.classList.remove('open'); };
-      });
-      document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-          mobileMenu.style.display = 'none'; hamburger.classList.remove('open');
-        }
-      });
-    }
 
-    // NAVBAR SCROLL
-    var navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
 
-    // LOGO HOVER NAME
-    var navLogo = document.getElementById('navLogo');
-    var logoName = navLogo ? navLogo.querySelector('.logo-name') : null;
-    if (navLogo && logoName) {
-      var hideTimer;
-      navLogo.addEventListener('mouseenter', function() { clearTimeout(hideTimer); logoName.classList.add('visible'); });
-      navLogo.addEventListener('mouseleave', function() { hideTimer = setTimeout(function() { logoName.classList.remove('visible'); }, 800); });
-      navLogo.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        logoName.classList.toggle('visible');
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(function() { logoName.classList.remove('visible'); }, 1500);
-      });
-    }
+    <div class="footer-grid">
 
-    // SCROLL REVEAL
-    function revealOnScroll() {
-      document.querySelectorAll('.reveal').forEach(function(el) {
-        if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('visible');
-      });
-    }
-    window.addEventListener('scroll', revealOnScroll, { passive: true });
-    revealOnScroll();
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-brand-name">Axiom Fintech Solutions</div>
+        <p>Finance · Technology · Innovation<br />Empowering Pakistani businesses with precision financial intelligence and modern technology solutions.</p>
+        <div class="footer-socials">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/axiomfintechsolutions" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/axiomfintechsolutions" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/axiomfintechsolutions" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
 
-    // COUNTER ANIMATION
-    var countersStarted = false;
-    function startCounters() {
-      if (countersStarted) return;
-      countersStarted = true;
-      document.querySelectorAll('.stat-val[data-count]').forEach(function(el) {
-        var target = +el.dataset.count;
-        var suffix = el.dataset.suffix || '';
-        var cur = 0, step = target / 60;
-        var t = setInterval(function() {
-          cur += step;
-          if (cur >= target) { cur = target; clearInterval(t); }
-          el.textContent = Math.floor(cur) + suffix;
-        }, 25);
-      });
-    }
-    setTimeout(startCounters, 800);
+      <!-- Company -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#founder">Our Founder</a></li>
+          <li><a href="about.html#mission">Mission &amp; Values</a></li>
+          <li><a href="portfolio.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-    // FAQ
-    function toggleFaq(btn) {
-      var item = btn.closest('.faq-item');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
-      if (!isOpen) item.classList.add('open');
-    }
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#financial-modeling">Financial Modeling</a></li>
+          <li><a href="services.html#bookkeeping">Bookkeeping</a></li>
+          <li><a href="services.html#data-analytics">Data Analytics</a></li>
+          <li><a href="services.html#automation">Automation</a></li>
+          <li><a href="services.html#reporting">Management Reporting</a></li>
+        </ul>
+      </div>
 
-    // SMOOTH SCROLL
-    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-      a.addEventListener('click', function(e) {
-        var target = document.querySelector(this.getAttribute('href'));
-        if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' }); }
-      });
-    });
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>
+            <a href="mailto:axiomfintechsolutions@gmail.com">
+              axiomfintechsolutions@gmail.com
+            </a>
+          </li>
+          <li><span>Punjab, Pakistan</span></li>
+          <li>
+            <a href="https://www.linkedin.com/company/axiomfintechsolutions" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/axiomfintechsolutions" target="_blank" rel="noopener">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/axiomfintechsolutions" target="_blank" rel="noopener">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
 
-    // CONTACT FORM
-    var form = document.getElementById('contactForm');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var btn = form.querySelector('button[type=submit]');
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-        setTimeout(function() {
-          btn.innerHTML = '✓ Message Sent!';
-          btn.style.background = '#16a34a';
-          form.reset();
-          setTimeout(function() { btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>'; btn.style.background = ''; btn.disabled = false; }, 3000);
-        }, 1200);
-      });
-    }
-  </script>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <span>© 2025 Axiom Fintech Solutions. All rights reserved.</span>
+      <span>Finance · Technology · Innovation</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     EMAILJS (load before script.js)
+════════════════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("YOUR_PUBLIC_KEY");
+  }
+</script>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAIN SCRIPT
+════════════════════════════════════════════════════════ -->
+<script src="script.js"></script>
+
 </body>
 </html>
