@@ -20,6 +20,7 @@
    13. PROCESS SECTION — Animated process cards
    14. MOBILE OVERFLOW FIX — Prevent horizontal scroll
    15. INIT — Run everything on DOMContentLoaded
+   16. Newsletter Subscription
    ============================================================ */
 
 
@@ -761,7 +762,89 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesHeroTags();
   initProcessCards();
 });
+/* ══════════════════════════════════════════════════════════
+   16. Newsletter Subscription
+   ══════════════════════════════════════════════════════════ */
+(function () {
+  const SHEET_URL  = 'https://script.google.com/macros/s/AKfycbxAtiyRZCkPuWRxVfaGvcHu-NDMLs356nusZhWqd7wZRPnfmBX0C0sStrSFmDQoAvg5/exec';
 
+  const overlay    = document.getElementById('popupOverlay');
+  const popup      = document.getElementById('newsletterPopup');
+  const closeBtn   = document.getElementById('popupClose');
+  const submitBtn  = document.getElementById('popupSubmit');
+  const success    = document.getElementById('popupSuccess');
+  const nameInput  = document.getElementById('popupName');
+  const emailInput = document.getElementById('popupEmail');
+
+  let shown = false;
+
+  // Show popup
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    overlay.classList.add('active');
+    setTimeout(() => popup.classList.add('active'), 10);
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Hide popup
+  function hidePopup() {
+    popup.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Trigger at 20% scroll
+  window.addEventListener('scroll', function () {
+    const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrolled >= 0.20) showPopup();
+  });
+
+  // Close on backdrop click
+  overlay.addEventListener('click', hidePopup);
+
+  // Close on X button
+  closeBtn.addEventListener('click', hidePopup);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') hidePopup();
+  });
+
+  // Submit to Google Sheets
+  submitBtn.addEventListener('click', function () {
+    const name  = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name)       { nameInput.focus();  return; }
+    if (!emailValid) { emailInput.focus(); return; }
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email })
+    })
+    .then(() => {
+      nameInput.style.display  = 'none';
+      emailInput.style.display = 'none';
+      submitBtn.style.display  = 'none';
+      document.querySelectorAll('.popup-form-label').forEach(el => el.style.display = 'none');
+      document.querySelector('.popup-privacy').style.display = 'none';
+      success.classList.add('show');
+      setTimeout(hidePopup, 2500);
+    })
+    .catch(() => {
+      submitBtn.textContent = 'Try Again';
+      submitBtn.disabled = false;
+    });
+  });
+
+})();
 
 /* ══════════════════════════════════════════════════════════
    EMAILJS SETUP GUIDE
