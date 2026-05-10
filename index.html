@@ -924,44 +924,22 @@
 </footer>
 
  <!-- Newsletter Subscription Form -->
-  <!-- Overlay backdrop -->
+  <!-- Overlay -->
 <div class="popup-overlay" id="popupOverlay"></div>
 
 <!-- Newsletter Popup -->
-<div class="popup" id="newsletterPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-
-  <button class="popup-close" id="popupClose" aria-label="Close popup">&#x2715;</button>
-
-  <div class="popup-left">
-    <div class="popup-label">The Edit</div>
-    <h2 class="popup-title" id="popupTitle">Curated for those<br/>with refined taste.</h2>
-    <p class="popup-subtitle">Join our inner circle. Receive exclusive collections, private previews, and stories — delivered with intention.</p>
-    <div class="popup-divider"></div>
-    <ul class="popup-perks">
-      <li>Early access to new collections</li>
-      <li>Members-only offers &amp; events</li>
-      <li>No noise. Unsubscribe anytime.</li>
-    </ul>
+<div class="popup" id="newsletterPopup" role="dialog" aria-modal="true">
+  <button class="popup-close" id="popupClose" aria-label="Close">&#x2715;</button>
+  <div class="popup-icon">✦</div>
+  <h2 class="popup-title">Stay in the Loop</h2>
+  <p class="popup-subtitle">Exclusive updates, straight to your inbox.</p>
+  <input class="popup-input" id="popupEmail" type="email" placeholder="Enter your email" />
+  <button class="popup-btn" id="popupSubmit">Subscribe</button>
+  <div class="popup-success" id="popupSuccess">
+    <span class="popup-success-icon">&#10003;</span>
+    <p>You're in. Welcome.</p>
   </div>
-
-  <div class="popup-right">
-    <label class="popup-form-label" for="popupName">Full Name</label>
-    <input class="popup-input" id="popupName" type="text" placeholder="Alexandra Monroe" />
-
-    <label class="popup-form-label" for="popupEmail">Email Address</label>
-    <input class="popup-input" id="popupEmail" type="email" placeholder="you@example.com" />
-
-    <button class="popup-btn" id="popupSubmit">Subscribe</button>
-    <p class="popup-privacy">We respect your privacy. No spam, ever.</p>
-
-    <div class="popup-success" id="popupSuccess">
-      <span class="popup-success-icon">&#10003;</span>
-      <p>Welcome to the inner circle.</p>
-    </div>
-  </div>
-
 </div>
-
 <!-- ═══════════════════════════════════════════════════════
      EMAILJS (load before script.js)
 ════════════════════════════════════════════════════════ -->
