@@ -773,12 +773,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn   = document.getElementById('popupClose');
   const submitBtn  = document.getElementById('popupSubmit');
   const success    = document.getElementById('popupSuccess');
-  const nameInput  = document.getElementById('popupName');
   const emailInput = document.getElementById('popupEmail');
 
   let shown = false;
 
-  // Show popup
   function showPopup() {
     if (shown) return;
     shown = true;
@@ -787,7 +785,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   }
 
-  // Hide popup
   function hidePopup() {
     popup.classList.remove('active');
     overlay.classList.remove('active');
@@ -796,28 +793,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Trigger at 20% scroll
   window.addEventListener('scroll', function () {
-    const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if (scrolled >= 0.20) showPopup();
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if ((scrollTop / docHeight) >= 0.20) showPopup();
   });
 
-  // Close on backdrop click
   overlay.addEventListener('click', hidePopup);
-
-  // Close on X button
   closeBtn.addEventListener('click', hidePopup);
-
-  // Close on Escape key
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') hidePopup();
   });
 
-  // Submit to Google Sheets
+  // Submit
   submitBtn.addEventListener('click', function () {
-    const name  = nameInput.value.trim();
     const email = emailInput.value.trim();
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-    if (!name)       { nameInput.focus();  return; }
     if (!emailValid) { emailInput.focus(); return; }
 
     submitBtn.textContent = 'Sending...';
@@ -827,14 +817,11 @@ document.addEventListener('DOMContentLoaded', () => {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email })
+      body: JSON.stringify({ email })
     })
     .then(() => {
-      nameInput.style.display  = 'none';
       emailInput.style.display = 'none';
       submitBtn.style.display  = 'none';
-      document.querySelectorAll('.popup-form-label').forEach(el => el.style.display = 'none');
-      document.querySelector('.popup-privacy').style.display = 'none';
       success.classList.add('show');
       setTimeout(hidePopup, 2500);
     })
