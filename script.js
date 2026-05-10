@@ -21,6 +21,7 @@
    14. MOBILE OVERFLOW FIX — Prevent horizontal scroll
    15. INIT — Run everything on DOMContentLoaded
    16. Newsletter Subscription
+   17. CASE STUDY DATA
    ============================================================ */
 
 
@@ -832,6 +833,206 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 })();
+/* ══════════════════════════════════════════════════════════
+   17. CASE STUDY DATA
+   ══════════════════════════════════════════════════════════ */
+// ── CASE STUDY DATA ──────────────────────────────────────
+const caseStudies = {
+  1: {
+    title: "Financial Model & Forecasting System for a Growing SME",
+    img: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80",
+    tags: ["Financial Modeling", "Excel"],
+    results: ["↑38% Forecast Accuracy", "3× Faster Reporting", "$2.4M Saved"],
+    stats: [
+      { val: "38%", label: "Forecast Accuracy Improvement" },
+      { val: "3×",  label: "Faster Monthly Reporting" }
+    ],
+    challenge: "A manufacturing SME needed a dynamic 3-year financial model to support a bank loan application. Their existing spreadsheets were disconnected, inconsistent, and couldn't produce scenario-based projections — causing repeated rejections from lenders.",
+    solution: "We built a fully integrated 3-statement financial model (P&L, Balance Sheet, Cash Flow) with a dedicated assumptions dashboard, three scenario toggles (base, optimistic, stress), and an auto-generating executive summary page formatted for bank submission.",
+    deliverables: [
+      "3-statement integrated financial model in Excel",
+      "Scenario analysis module (base / optimistic / stress)",
+      "5-year revenue and cost projection engine",
+      "Bank-ready executive summary output page",
+      "Training session and model documentation"
+    ],
+    tools: ["Microsoft Excel", "Power Query", "VBA Macros"]
+  },
+
+  2: {
+    title: "Complete Bookkeeping Cleanup & Chart of Accounts for a Retail Chain",
+    img: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&q=80",
+    tags: ["Bookkeeping", "Accounting"],
+    results: ["18 Months Reconciled", "100% Audit Ready", "$80K Variance Found"],
+    stats: [
+      { val: "18mo", label: "Records Reconciled" },
+      { val: "$80K", label: "Variances Uncovered" }
+    ],
+    challenge: "A retail chain with 4 outlets had 18 months of unreconciled books ahead of a tax audit. Transactions were miscategorised, bank statements hadn't been matched, and their Chart of Accounts was a mess of duplicate and redundant entries.",
+    solution: "We conducted a full forensic bookkeeping review — reconciling every bank statement, correcting miscategorised entries, and rebuilding their Chart of Accounts from scratch to reflect their multi-outlet structure. We also wrote SOPs so their team could maintain clean books going forward.",
+    deliverables: [
+      "18 months of reconciled bank and book records",
+      "Rebuilt Chart of Accounts for 4-outlet structure",
+      "Corrected P&L and Balance Sheet",
+      "Variance analysis report identifying $80K in discrepancies",
+      "Bookkeeping SOPs for ongoing team use"
+    ],
+    tools: ["QuickBooks", "Microsoft Excel", "Bank Reconciliation Templates"]
+  },
+
+  3: {
+    title: "Sales Intelligence Dashboard for FMCG Distributor",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    tags: ["Power BI", "Data Analytics"],
+    results: ["↑22% Revenue", "60% Faster Insights", "5 Regions Live"],
+    stats: [
+      { val: "22%", label: "Revenue Uplift in 90 Days" },
+      { val: "60%", label: "Faster Reporting Cycle" }
+    ],
+    challenge: "An FMCG distributor operating across 5 regions had no real-time visibility into sales performance. Regional managers were working from week-old Excel exports, making pricing and stock decisions based on stale data — costing margin and market share.",
+    solution: "We connected all regional data sources into a centralised Power BI environment, built a live multi-region sales dashboard with drill-down by SKU, region, and rep, and automated the daily data refresh. Managers went from weekly exports to live 15-minute data.",
+    deliverables: [
+      "Live Power BI dashboard across 5 regions",
+      "SKU-level and rep-level performance views",
+      "Automated daily data refresh pipeline",
+      "Regional manager training and onboarding",
+      "Custom alerting for underperforming SKUs"
+    ],
+    tools: ["Power BI", "SQL Server", "Power Query", "DAX"]
+  },
+
+  4: {
+    title: "E-Commerce Sales Analytics Dashboard — Daraz Seller",
+    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80",
+    tags: ["Data Analytics", "E-Commerce"],
+    results: ["↑31% Conversion Rate", "↓18% Return Rate", "Top 5% Seller Ranking"],
+    stats: [
+      { val: "31%", label: "Conversion Rate Uplift" },
+      { val: "18%", label: "Return Rate Reduction" }
+    ],
+    challenge: "An online marketplace seller across 3 product categories had no visibility into which listings converted or why returns were high. Decisions about pricing, listings, and inventory were made entirely on gut feel — leading to high return rates and poor ranking.",
+    solution: "We built a full analytics layer pulling listing performance, returns data, and customer behaviour into a single dashboard. Using the insights, we identified the top return drivers, restructured underperforming listings, and built a pricing model tied to competitor movements.",
+    deliverables: [
+      "Listing-level performance analytics dashboard",
+      "Returns root-cause analysis report",
+      "Pricing model with competitor tracking",
+      "Inventory demand forecasting model",
+      "Monthly performance review template"
+    ],
+    tools: ["Python", "Excel", "Power BI", "Daraz Seller API"]
+  },
+
+  5: {
+    title: "Accounts Payable Automation for a Construction Firm",
+    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80",
+    tags: ["Automation", "Process Design"],
+    results: ["↓70% Manual Entry", "4× Processing Speed", "Zero Payment Errors"],
+    stats: [
+      { val: "70%", label: "Reduction in Manual Entry" },
+      { val: "4×",  label: "Invoice Processing Speed" }
+    ],
+    challenge: "A construction firm processing 200+ invoices monthly through a paper-based AP system was suffering from payment delays, duplicate payments, and vendor disputes. Their finance team was spending 3 full days a month just on data entry.",
+    solution: "We designed and implemented a fully digital AP workflow — from invoice capture through OCR, to automated 3-way matching, to approval routing and payment scheduling. The entire process now runs with minimal human intervention and a full audit trail.",
+    deliverables: [
+      "Digital invoice capture via OCR integration",
+      "Automated 3-way matching (PO / GRN / Invoice)",
+      "Approval workflow with role-based routing",
+      "Payment scheduling and bank integration",
+      "AP performance dashboard and audit log"
+    ],
+    tools: ["Python", "Power Automate", "Microsoft Excel", "SharePoint"]
+  },
+
+  6: {
+    title: "IFRS-Compliant Management Accounts for a Tech Startup",
+    img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80",
+    tags: ["IFRS Reporting", "SaaS"],
+    results: ["100% IFRS Compliant", "Investor-Ready Reports", "Series A Secured"],
+    stats: [
+      { val: "100%", label: "IFRS Compliance Achieved" },
+      { val: "Series A", label: "Funding Round Closed" }
+    ],
+    challenge: "A SaaS startup preparing for Series A had mixed accrual and cash-basis records, no segment reporting, and revenue recognition that didn't meet IFRS 15 standards. Their existing reports were rejected by two institutional investors before they came to us.",
+    solution: "We rebuilt their entire financial reporting stack from scratch — restating prior periods under IFRS, implementing correct revenue recognition under IFRS 15, building segment reports by product line, and producing a full investor-grade management accounts pack.",
+    deliverables: [
+      "Full IFRS restatement of prior 2 years",
+      "IFRS 15-compliant revenue recognition model",
+      "Segment reporting by product line and geography",
+      "Investor-grade monthly management accounts pack",
+      "Board reporting template and KPI dashboard"
+    ],
+    tools: ["Microsoft Excel", "Xero", "Google Sheets", "IFRS Standards Framework"]
+  }
+};
+
+
+// ── MODAL OPEN / CLOSE ───────────────────────────────────
+const backdrop  = document.getElementById('caseModalBackdrop');
+const modal     = document.getElementById('caseModal');
+const closeBtn  = document.getElementById('modalClose');
+
+function openModal(caseId) {
+  const d = caseStudies[caseId];
+  if (!d) return;
+
+  // Image
+  document.getElementById('modalHeroImg').src = d.img;
+  document.getElementById('modalHeroImg').alt = d.title;
+
+  // Tags
+  document.getElementById('modalTags').innerHTML =
+    d.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
+
+  // Title
+  document.getElementById('modalTitle').textContent = d.title;
+
+  // Result pills
+  document.getElementById('modalResults').innerHTML =
+    d.results.map(r => `<span class="modal-result-pill">✦ ${r}</span>`).join('');
+
+  // Stat boxes
+  document.getElementById('modalStats').innerHTML =
+    d.stats.map(s => `
+      <div class="modal-stat-box">
+        <div class="modal-stat-val">${s.val}</div>
+        <div class="modal-stat-label">${s.label}</div>
+      </div>`).join('');
+
+  // Text sections
+  document.getElementById('modalChallenge').innerHTML    = d.challenge;
+  document.getElementById('modalSolution').innerHTML     = d.solution;
+
+  // Deliverables list
+  document.getElementById('modalDeliverables').innerHTML =
+    d.deliverables.map(item => `<li class="modal-list-item">${item}</li>`).join('');
+
+  // Tools
+  document.getElementById('modalTools').innerHTML =
+    d.tools.map(t => `<span class="modal-tool">${t}</span>`).join('');
+
+  // Open
+  backdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modal.scrollTop = 0;
+}
+
+function closeModal() {
+  backdrop.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Card clicks
+document.querySelectorAll('.p-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card.dataset.case));
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.case); }
+  });
+});
+
+// Close triggers
+closeBtn?.addEventListener('click', closeModal);
+backdrop?.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 /* ══════════════════════════════════════════════════════════
    EMAILJS SETUP GUIDE
