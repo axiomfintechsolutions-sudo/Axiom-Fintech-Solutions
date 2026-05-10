@@ -42,9 +42,9 @@ const CONFIG = {
     handle:    'axiomfintechsolutions',
   },
   emailjs: {
-    serviceId:  'YOUR_SERVICE_ID',    // replace after EmailJS setup
-    templateId: 'YOUR_TEMPLATE_ID',  // replace after EmailJS setup
-    publicKey:  'YOUR_PUBLIC_KEY',   // replace after EmailJS setup
+    serviceId:  'service_phaj405',    // replace after EmailJS setup
+    templateId: 'template_qv7aydg',  // replace after EmailJS setup
+    publicKey:  'GNS5b8ejPMM6G_NUx',   // replace after EmailJS setup
   },
   animation: {
     revealThreshold:   0.08,
