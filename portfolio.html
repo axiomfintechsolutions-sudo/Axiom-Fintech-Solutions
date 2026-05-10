@@ -545,53 +545,380 @@
 <!-- ═══════════════════════════════════════════════════════
      CASE STUDY MODAL
 ════════════════════════════════════════════════════════ -->
-  <!-- CASE STUDY MODAL -->
-<div class="case-modal-backdrop" id="caseModalBackdrop" role="dialog" aria-modal="true" aria-label="Case study details">
+ <!-- ═══════════════════════════════════════════════════════
+     CASE STUDY MODAL
+════════════════════════════════════════════════════════ -->
+<div class="case-modal-backdrop" id="caseModalBackdrop">
   <div class="case-modal" id="caseModal">
 
-    <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
 
-    <img class="modal-hero-img" id="modalHeroImg" src="" alt="" />
-
-    <div class="modal-body">
-      <div class="modal-tags"     id="modalTags"></div>
-      <h2  class="modal-title"    id="modalTitle"></h2>
-      <div class="modal-results"  id="modalResults"></div>
-
-      <div class="modal-two-col"  id="modalStats"></div>
-
-      <div class="modal-section">
-        <div class="modal-section-title">The Challenge</div>
-        <p   class="modal-section-text" id="modalChallenge"></p>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-section-title">Our Solution</div>
-        <p   class="modal-section-text" id="modalSolution"></p>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-section-title">What We Delivered</div>
-        <ul  class="modal-list"         id="modalDeliverables"></ul>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-section-title">Tools Used</div>
-        <div class="modal-tools"        id="modalTools"></div>
-      </div>
-
-      <div class="modal-cta">
-        <div>
-          <strong>Ready to see similar results?</strong>
-          <p>Let's talk about your project — no obligation.</p>
+    <!-- ─── CASE 1 ─── -->
+    <div class="modal-case" data-case="1">
+      <img class="modal-hero-img" src="assets/port1.jpg" alt="Financial Model case study" />
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="modal-tag">Financial Modeling</span>
+          <span class="modal-tag">Excel</span>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        <h2 class="modal-title">Financial Model &amp; Forecasting System for a Pakistani SME</h2>
+        <div class="modal-results">
+          <span class="modal-result-pill">✦ ↑38% Forecast Accuracy</span>
+          <span class="modal-result-pill">✦ 3× Faster Reporting</span>
+          <span class="modal-result-pill">✦ PKR 2.4M Cost Savings</span>
+        </div>
+        <div class="modal-two-col">
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">38%</div>
+            <div class="modal-stat-label">Forecast Accuracy Gain</div>
+          </div>
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">3×</div>
+            <div class="modal-stat-label">Faster Monthly Reporting</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">The Challenge</div>
+          <p class="modal-section-text">A manufacturing SME in Lahore needed a reliable financial model to support a bank loan application and internal planning. Their existing spreadsheets were inconsistent and lacked forward-looking projections — causing repeated rejections from lenders.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Our Solution</div>
+          <p class="modal-section-text">We built a fully integrated 3-statement financial model (P&amp;L, Balance Sheet, Cash Flow) with a dedicated assumptions dashboard, three scenario toggles (base, optimistic, stress), and an auto-generating executive summary page formatted for bank submission.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">What We Delivered</div>
+          <ul class="modal-list">
+            <li class="modal-list-item">3-year P&amp;L, Balance Sheet &amp; Cash Flow model</li>
+            <li class="modal-list-item">Revenue scenario engine (Base / Bull / Bear)</li>
+            <li class="modal-list-item">Monthly vs annual toggle with automated roll-ups</li>
+            <li class="modal-list-item">Bank-ready executive summary dashboard</li>
+            <li class="modal-list-item">Sensitivity analysis table for key assumptions</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Tools Used</div>
+          <div class="modal-tools">
+            <span class="modal-tool">Microsoft Excel</span>
+            <span class="modal-tool">Power Query</span>
+            <span class="modal-tool">VBA Macros</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <div>
+            <strong>Ready to see similar results?</strong>
+            <p>Let's talk about your project — no obligation.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        </div>
       </div>
     </div>
 
-  </div>
-</div>
+    <!-- ─── CASE 2 ─── -->
+    <div class="modal-case" data-case="2">
+      <img class="modal-hero-img" src="assets/port2.jpg" alt="Bookkeeping cleanup case study" />
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="modal-tag">Bookkeeping</span>
+          <span class="modal-tag">Accounting</span>
+        </div>
+        <h2 class="modal-title">Complete Bookkeeping Cleanup &amp; Chart of Accounts for a Retail Chain</h2>
+        <div class="modal-results">
+          <span class="modal-result-pill">✦ 18 Months Reconciled</span>
+          <span class="modal-result-pill">✦ 100% Audit Ready</span>
+          <span class="modal-result-pill">✦ PKR 800K Variance Found</span>
+        </div>
+        <div class="modal-two-col">
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">18mo</div>
+            <div class="modal-stat-label">Records Reconciled</div>
+          </div>
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">PKR 800K</div>
+            <div class="modal-stat-label">Variance Identified</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">The Challenge</div>
+          <p class="modal-section-text">A retail chain with 4 outlets had 18 months of unreconciled books across QuickBooks and manual Excel records. They faced an upcoming tax audit with no clear picture of their actual financial position.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Our Solution</div>
+          <p class="modal-section-text">We conducted a full forensic bookkeeping review — reconciling every bank statement, correcting miscategorised entries, and rebuilding their Chart of Accounts from scratch to reflect their multi-outlet structure. We also wrote SOPs so their team could maintain clean books going forward.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">What We Delivered</div>
+          <ul class="modal-list">
+            <li class="modal-list-item">Full 18-month transaction audit and reconciliation</li>
+            <li class="modal-list-item">Redesigned Chart of Accounts aligned to FBR categories</li>
+            <li class="modal-list-item">Cleaned QuickBooks file with correct opening balances</li>
+            <li class="modal-list-item">Standard Operating Procedure (SOP) for monthly close</li>
+            <li class="modal-list-item">Bank reconciliation templates for all 4 outlets</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Tools Used</div>
+          <div class="modal-tools">
+            <span class="modal-tool">QuickBooks</span>
+            <span class="modal-tool">Microsoft Excel</span>
+            <span class="modal-tool">FBR Tax Framework</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <div>
+            <strong>Ready to see similar results?</strong>
+            <p>Let's talk about your project — no obligation.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        </div>
+      </div>
+    </div>
 
+    <!-- ─── CASE 3 ─── -->
+    <div class="modal-case" data-case="3">
+      <img class="modal-hero-img" src="assets/port3.jpg" alt="Power BI dashboard case study" />
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="modal-tag">Power BI</span>
+          <span class="modal-tag">Data Analytics</span>
+        </div>
+        <h2 class="modal-title">Sales Intelligence Dashboard for FMCG Distributor</h2>
+        <div class="modal-results">
+          <span class="modal-result-pill">✦ ↑22% Revenue</span>
+          <span class="modal-result-pill">✦ 60% Faster Insights</span>
+          <span class="modal-result-pill">✦ 5 Regions Visualized</span>
+        </div>
+        <div class="modal-two-col">
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">22%</div>
+            <div class="modal-stat-label">Revenue Increase</div>
+          </div>
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">60%</div>
+            <div class="modal-stat-label">Faster Reporting Cycle</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">The Challenge</div>
+          <p class="modal-section-text">A mid-sized FMCG distributor covering 5 regions in Punjab was making stock and pricing decisions based on weekly CSV exports. Leadership had no real-time visibility into which products, regions, or reps were performing.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Our Solution</div>
+          <p class="modal-section-text">We connected all regional data sources into a centralised Power BI environment, built a live multi-region sales dashboard with drill-down by SKU, region, and rep, and automated the daily data refresh. Managers went from weekly exports to live 15-minute data.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">What We Delivered</div>
+          <ul class="modal-list">
+            <li class="modal-list-item">Power BI dashboard: Sales by region, SKU, rep &amp; channel</li>
+            <li class="modal-list-item">Automated ETL pipeline using Power Query</li>
+            <li class="modal-list-item">KPI cards: Revenue, Margin, Returns, Fill Rate</li>
+            <li class="modal-list-item">Month-over-month and YoY trend comparisons</li>
+            <li class="modal-list-item">Mobile-optimized layout for leadership on the go</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Tools Used</div>
+          <div class="modal-tools">
+            <span class="modal-tool">Power BI</span>
+            <span class="modal-tool">Power Query</span>
+            <span class="modal-tool">Excel</span>
+            <span class="modal-tool">DAX</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <div>
+            <strong>Ready to see similar results?</strong>
+            <p>Let's talk about your project — no obligation.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CASE 4 ─── -->
+    <div class="modal-case" data-case="4">
+      <img class="modal-hero-img" src="assets/port4.jpg" alt="E-commerce analytics case study" />
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="modal-tag">Data Analytics</span>
+          <span class="modal-tag">E-Commerce</span>
+        </div>
+        <h2 class="modal-title">E-Commerce Sales Analytics Dashboard — Daraz Seller</h2>
+        <div class="modal-results">
+          <span class="modal-result-pill">✦ ↑31% Conversion Rate</span>
+          <span class="modal-result-pill">✦ ↓18% Return Rate</span>
+          <span class="modal-result-pill">✦ Top 5% Seller Ranking</span>
+        </div>
+        <div class="modal-two-col">
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">31%</div>
+            <div class="modal-stat-label">Conversion Rate Uplift</div>
+          </div>
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">18%</div>
+            <div class="modal-stat-label">Return Rate Reduction</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">The Challenge</div>
+          <p class="modal-section-text">A Daraz seller running 3 product categories had no structured way to track which listings converted, which promotions worked, or why certain SKUs had high return rates. Revenue was growing but margins were shrinking.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Our Solution</div>
+          <p class="modal-section-text">We built a full analytics layer pulling listing performance, returns data, and customer behaviour into a single dashboard. Using the insights, we identified the top return drivers, restructured underperforming listings, and built a pricing model tied to competitor movements.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">What We Delivered</div>
+          <ul class="modal-list">
+            <li class="modal-list-item">SKU-level profitability analysis across all 3 categories</li>
+            <li class="modal-list-item">Return rate root-cause breakdown by product type</li>
+            <li class="modal-list-item">Conversion funnel model from impressions to orders</li>
+            <li class="modal-list-item">Promotional ROI tracker for campaign spend</li>
+            <li class="modal-list-item">Weekly automated summary report via Excel + Power Query</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Tools Used</div>
+          <div class="modal-tools">
+            <span class="modal-tool">Excel</span>
+            <span class="modal-tool">Power BI</span>
+            <span class="modal-tool">Python</span>
+            <span class="modal-tool">Pandas</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <div>
+            <strong>Ready to see similar results?</strong>
+            <p>Let's talk about your project — no obligation.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CASE 5 ─── -->
+    <div class="modal-case" data-case="5">
+      <img class="modal-hero-img" src="assets/port5.jpg" alt="AP Automation case study" />
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="modal-tag">Automation</span>
+          <span class="modal-tag">Process Design</span>
+        </div>
+        <h2 class="modal-title">Accounts Payable Automation for a Construction Firm</h2>
+        <div class="modal-results">
+          <span class="modal-result-pill">✦ ↓70% Manual Entry</span>
+          <span class="modal-result-pill">✦ 4× Processing Speed</span>
+          <span class="modal-result-pill">✦ Zero Payment Errors</span>
+        </div>
+        <div class="modal-two-col">
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">70%</div>
+            <div class="modal-stat-label">Manual Entry Reduced</div>
+          </div>
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">4×</div>
+            <div class="modal-stat-label">Invoice Processing Speed</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">The Challenge</div>
+          <p class="modal-section-text">A mid-size construction firm in Islamabad processed 200+ supplier invoices monthly through a fully manual, paper-based AP workflow. Payment delays were damaging vendor relationships and causing costly penalties.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Our Solution</div>
+          <p class="modal-section-text">We designed and implemented a fully digital AP workflow — from invoice capture through OCR, to automated 3-way matching, to approval routing and payment scheduling. The entire process now runs with minimal human intervention and a full audit trail.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">What We Delivered</div>
+          <ul class="modal-list">
+            <li class="modal-list-item">Digital AP workflow using Excel + Power Automate</li>
+            <li class="modal-list-item">Invoice intake form with automatic routing rules</li>
+            <li class="modal-list-item">Multi-level approval tracker with email notifications</li>
+            <li class="modal-list-item">Vendor ledger reconciliation template</li>
+            <li class="modal-list-item">Monthly AP aging report with exception flags</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Tools Used</div>
+          <div class="modal-tools">
+            <span class="modal-tool">Excel</span>
+            <span class="modal-tool">Power Automate</span>
+            <span class="modal-tool">Power Query</span>
+            <span class="modal-tool">Outlook</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <div>
+            <strong>Ready to see similar results?</strong>
+            <p>Let's talk about your project — no obligation.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CASE 6 ─── -->
+    <div class="modal-case" data-case="6">
+      <img class="modal-hero-img" src="assets/port6.jpg" alt="IFRS reporting case study" />
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="modal-tag">Financial Reporting</span>
+          <span class="modal-tag">IFRS</span>
+        </div>
+        <h2 class="modal-title">IFRS-Compliant Management Accounts for a Tech Startup</h2>
+        <div class="modal-results">
+          <span class="modal-result-pill">✦ Investor-Ready Reports</span>
+          <span class="modal-result-pill">✦ 100% IFRS Compliant</span>
+          <span class="modal-result-pill">✦ Series A Funding Secured</span>
+        </div>
+        <div class="modal-two-col">
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">100%</div>
+            <div class="modal-stat-label">IFRS Compliance Achieved</div>
+          </div>
+          <div class="modal-stat-box">
+            <div class="modal-stat-val">Series A</div>
+            <div class="modal-stat-label">Funding Round Closed</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">The Challenge</div>
+          <p class="modal-section-text">A SaaS startup preparing for Series A funding needed to restructure their financial reporting to meet investor and IFRS standards. Their existing reports mixed cash and accrual entries, had no segment reporting, and lacked the narrative investors expect.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Our Solution</div>
+          <p class="modal-section-text">We rebuilt their entire reporting stack from scratch — converting historical records to accrual basis, adding segment-level P&amp;L for 2 product lines, and producing a Board Pack that would satisfy VC due diligence.</p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">What We Delivered</div>
+          <ul class="modal-list">
+            <li class="modal-list-item">IFRS-compliant P&amp;L, Balance Sheet &amp; Cash Flow statements</li>
+            <li class="modal-list-item">Segment reporting for 2 product lines (SaaS + Services)</li>
+            <li class="modal-list-item">Monthly Board Pack template with KPI commentary</li>
+            <li class="modal-list-item">Deferred revenue and accruals schedule</li>
+            <li class="modal-list-item">Investor data room: 3-year financial summary</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-title">Tools Used</div>
+          <div class="modal-tools">
+            <span class="modal-tool">Excel</span>
+            <span class="modal-tool">QuickBooks</span>
+            <span class="modal-tool">IFRS Standards</span>
+            <span class="modal-tool">Power BI</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <div>
+            <strong>Ready to see similar results?</strong>
+            <p>Let's talk about your project — no obligation.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-dark">Get Started →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /case-modal -->
+</div><!-- /case-modal-backdrop -->
 <!-- ═══════════════════════════════════════════════════════
      EMAILJS + SCRIPT
 ════════════════════════════════════════════════════════ -->
