@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portal · Axiom Fintech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #1E3A5F;
+      --navy-dk:   #152B47;
+      --blue:      #2563EB;
+      --blue-pale: #EFF6FF;
+      --bg:        #F1F5F9;
+      --card:      #FFFFFF;
+      --border:    #E2E8F0;
+      --text:      #0F172A;
+      --text2:     #64748B;
+      --text3:     #94A3B8;
+      --success:   #059669;
+      --success-bg:#ECFDF5;
+      --warn:      #D97706;
+      --warn-bg:   #FFFBEB;
+      --danger:    #DC2626;
+      --danger-bg: #FEF2F2;
+      --r:         12px;
+      --r-sm:      8px;
+    }
+
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── Navbar ── */
+    .nav {
+      background: var(--card); border-bottom: 1px solid var(--border);
+      padding: 0 28px; height: 60px; display: flex; align-items: center;
+      justify-content: space-between; position: sticky; top: 0; z-index: 50;
+    }
+    .nav-left { display: flex; align-items: center; gap: 14px; }
+    .nav-logo img { height: 28px; display: block; }
+    .nav-divider { width: 1px; height: 20px; background: var(--border); }
+    .nav-title { font-size: 13px; font-weight: 500; color: var(--text2); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .user-pill {
+      font-size: 12px; font-weight: 500; color: var(--navy);
+      background: var(--blue-pale); padding: 4px 12px; border-radius: 99px;
+      max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .btn-logout {
+      font-size: 13px; font-weight: 500; color: var(--text2);
+      background: transparent; border: 1px solid var(--border);
+      border-radius: var(--r-sm); padding: 6px 14px; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-logout:hover { background: var(--bg); color: var(--text); }
+
+    /* ── Page ── */
+    .page { max-width: 1060px; margin: 0 auto; padding: 32px 24px 60px; }
+
+    .welcome { margin-bottom: 24px; }
+    .welcome-greeting { font-size: 22px; font-weight: 600; color: var(--text); letter-spacing: -.02em; }
+    .welcome-sub { font-size: 14px; color: var(--text2); margin-top: 3px; }
+    .welcome-sub span { color: var(--text); font-weight: 500; }
+
+    .section-head {
+      font-size: 11px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text3); margin-bottom: 12px;
+    }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 24px; }
+    .status-card { margin-bottom: 24px; }
+
+    /* ── Timeline ── */
+    .timeline { display: flex; align-items: flex-start; margin-top: 4px; }
+    .step { flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; }
+    .step::before {
+      content: ''; position: absolute; top: 15px;
+      left: calc(-50%); right: calc(50%); height: 2px; background: var(--border);
+    }
+    .step:first-child::before { display: none; }
+    .step.done::before, .step.active::before { background: var(--navy); }
+    .step-dot {
+      width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border);
+      background: var(--card); display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 600; color: var(--text3); position: relative; z-index: 1;
+    }
+    .step.done .step-dot { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .step.active .step-dot { background: var(--blue); border-color: var(--blue); color: #fff; box-shadow: 0 0 0 4px rgba(37,99,235,.15); }
+    .step-lbl { font-size: 11px; font-weight: 500; color: var(--text3); margin-top: 8px; text-align: center; line-height: 1.3; }
+    .step.done .step-lbl, .step.active .step-lbl { color: var(--text); }
+
+    .status-note { margin-top: 18px; padding: 10px 14px; border-radius: var(--r-sm); font-size: 13px; display: flex; align-items: center; gap: 8px; }
+    .status-note.blue   { background: var(--blue-pale); color: var(--blue); }
+    .status-note.green  { background: var(--success-bg); color: var(--success); }
+    .status-note.yellow { background: var(--warn-bg); color: var(--warn); }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* ── Upload zone ── */
+    .drop-zone {
+      border: 2px dashed var(--border); border-radius: var(--r);
+      padding: 28px 20px; text-align: center; cursor: pointer;
+      transition: border-color .15s, background .15s; margin-bottom: 16px;
+    }
+    .drop-zone:hover, .drop-zone.over { border-color: var(--blue); background: var(--blue-pale); }
+    .drop-icon { font-size: 28px; margin-bottom: 8px; }
+    .drop-text { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+    .drop-hint { font-size: 12px; color: var(--text3); }
+    .drop-link { color: var(--blue); font-weight: 500; }
+    #fileInput { display: none; }
+
+    /* ── Progress ── */
+    .progress-wrap { display: none; margin-bottom: 12px; }
+    .progress-wrap.on { display: block; }
+    .progress-bar { height: 4px; background: var(--border); border-radius: 99px; overflow: hidden; }
+    .progress-fill { height: 100%; background: var(--blue); border-radius: 99px; width: 0%; transition: width .2s; }
+    .progress-label { font-size: 12px; color: var(--text2); margin-top: 5px; }
+
+    /* ── File list ── */
+    .file-list { display: flex; flex-direction: column; gap: 8px; }
+    .file-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--card); }
+    .file-ext { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+    .ext-pdf   { background: #FEF2F2; color: #DC2626; }
+    .ext-xlsx  { background: #ECFDF5; color: #059669; }
+    .ext-doc   { background: #EFF6FF; color: #2563EB; }
+    .ext-img   { background: #FDF4FF; color: #9333EA; }
+    .ext-other { background: var(--bg); color: var(--text2); }
+    .file-info { flex: 1; min-width: 0; }
+    .file-name { font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .file-meta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+    .btn-del { background: transparent; border: none; cursor: pointer; color: var(--text3); font-size: 16px; padding: 4px; border-radius: 4px; line-height: 1; flex-shrink: 0; }
+    .btn-del:hover { color: var(--danger); background: var(--danger-bg); }
+    .btn-dl { background: transparent; border: 1px solid var(--border); cursor: pointer; color: var(--navy); font-size: 12px; font-weight: 500; padding: 5px 10px; border-radius: 6px; font-family: 'DM Sans', sans-serif; white-space: nowrap; flex-shrink: 0; text-decoration: none; display: inline-block; }
+    .btn-dl:hover { background: var(--blue-pale); border-color: var(--blue); color: var(--blue); }
+
+    .empty { text-align: center; padding: 28px 16px; color: var(--text3); }
+    .empty-icon { font-size: 28px; margin-bottom: 8px; }
+    .empty-text { font-size: 13px; }
+
+    /* ── Toast ── */
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--navy); color: #fff; padding: 12px 18px; border-radius: var(--r); font-size: 13px; font-weight: 500; z-index: 999; transform: translateY(60px); opacity: 0; transition: transform .25s, opacity .25s; max-width: 300px; }
+    .toast.on  { transform: translateY(0); opacity: 1; }
+    .toast.err { background: var(--danger); }
+
+    /* ── Loading ── */
+    #loading { position: fixed; inset: 0; background: #fff; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; z-index: 500; }
+    .spin { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--navy); border-radius: 50%; animation: rot .7s linear infinite; }
+    @keyframes rot { to { transform: rotate(360deg); } }
+
+    @media (max-width: 680px) {
+      .grid2 { grid-template-columns: 1fr; }
+      .nav { padding: 0 16px; }
+      .page { padding: 20px 16px 60px; }
+      .timeline { flex-direction: column; align-items: flex-start; gap: 0; }
+      .step { flex-direction: row; align-items: flex-start; width: 100%; gap: 12px; padding: 8px 0; }
+      .step::before { display: none; }
+      .step-lbl { margin-top: 4px; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading">
+    <div class="spin"></div>
+    <span style="font-size:13px;color:var(--text3);">Loading your portal…</span>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="https://www.axiomfintechsolutions.com" class="nav-logo">
+        <img src="https://www.axiomfintechsolutions.com/Assets/axiomlogonew.png" alt="Axiom">
+      </a>
+      <div class="nav-divider"></div>
+      <span class="nav-title">Client Portal</span>
+    </div>
+    <div class="nav-right">
+      <div class="user-pill" id="userPill">…</div>
+      <button class="btn-logout" onclick="signOut()">Sign out</button>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="welcome">
+      <div class="welcome-greeting" id="greeting">Good day</div>
+      <div class="welcome-sub" id="welcomeSub">Loading your project details…</div>
+    </div>
+
+    <p class="section-head">Project Status</p>
+    <div class="card status-card">
+      <div class="timeline" id="timeline"></div>
+      <div class="status-note blue" id="statusNote">Loading…</div>
+    </div>
+
+    <div class="grid2">
+      <!-- Upload -->
+      <div>
+        <p class="section-head">Upload Your Documents</p>
+        <div class="card">
+          <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+            <div class="drop-icon">📂</div>
+            <div class="drop-text">Drop files here or <span class="drop-link">browse</span></div>
+            <div class="drop-hint">PDF, Excel, Word, Images · Max 20 MB per file</div>
+          </div>
+          <input type="file" id="fileInput" multiple accept=".pdf,.xlsx,.xls,.csv,.doc,.docx,.jpg,.jpeg,.png,.webp">
+          <div class="progress-wrap" id="progressWrap">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-label" id="progressLabel">Uploading…</div>
+          </div>
+          <p style="font-size:12px;font-weight:500;color:var(--text2);margin-bottom:10px;">Documents you've uploaded</p>
+          <div class="file-list" id="uploadList">
+            <div class="empty"><div class="empty-icon">📄</div><div class="empty-text">No documents uploaded yet.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deliverables -->
+      <div>
+        <p class="section-head">Your Deliverables from Axiom</p>
+        <div class="card">
+          <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">Files the Axiom team has delivered for your project.</p>
+          <div class="file-list" id="deliverList">
+            <div class="empty">
+              <div class="empty-icon">📦</div>
+              <div class="empty-text">No deliverables yet.<br>They'll appear here when ready.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const STEPS = [
+      { id: 'discovery',   label: 'Discovery Call',  note: '📞 Discovery call completed. Scope is being prepared.', noteClass: 'blue'   },
+      { id: 'scoping',     label: 'Scope Agreed',    note: '📋 Scope agreed. Work is about to begin.',              noteClass: 'yellow' },
+      { id: 'in_progress', label: 'In Progress',     note: '⚡ Your project is actively being worked on.',          noteClass: 'yellow' },
+      { id: 'review',      label: 'Under Review',    note: '🔍 Deliverables are ready for your review.',            noteClass: 'yellow' },
+      { id: 'delivered',   label: 'Delivered ✓',     note: '✅ All deliverables are complete. Download below.',     noteClass: 'green'  },
+    ];
+
+    let uid = null;
+
+    auth.onAuthStateChanged(async user => {
+      if (!user) { window.location.href = 'login.html'; return; }
+      if (ADMIN_EMAILS.includes(user.email)) { window.location.href = 'admin.html'; return; }
+      uid = user.uid;
+      await loadPortal(user);
+      document.getElementById('loading').style.display = 'none';
+    });
+
+    async function loadPortal(user) {
+      const snap = await db.collection('clients').doc(user.uid).get();
+      if (!snap.exists) {
+        document.getElementById('greeting').textContent = 'Welcome!';
+        document.getElementById('welcomeSub').textContent = 'Your portal is being set up by the Axiom team. Check back soon.';
+        document.getElementById('userPill').textContent = user.email;
+        renderTimeline('discovery');
+        loadUploads(); loadDeliverables();
+        return;
+      }
+      const data = snap.data();
+      const hour  = new Date().getHours();
+      const greet = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+      document.getElementById('greeting').textContent  = `${greet}, ${data.name || 'valued client'}`;
+      document.getElementById('welcomeSub').innerHTML  = `<span>${data.company || ''}</span>&ensp;·&ensp;${data.service || ''}`;
+      document.getElementById('userPill').textContent  = data.name || user.email;
+      renderTimeline(data.projectStatus || 'discovery');
+      loadUploads();
+      loadDeliverables();
+    }
+
+    function renderTimeline(currentStatus) {
+      const container  = document.getElementById('timeline');
+      const currentIdx = STEPS.findIndex(s => s.id === currentStatus);
+      const step       = STEPS[currentIdx] || STEPS[0];
+      container.innerHTML = STEPS.map((s, i) => {
+        const cls  = i < currentIdx ? 'done' : i === currentIdx ? 'active' : '';
+        const icon = i < currentIdx ? '✓' : (i + 1);
+        return `<div class="step ${cls}"><div class="step-dot">${icon}</div><div class="step-lbl">${s.label}</div></div>`;
+      }).join('');
+      const note = document.getElementById('statusNote');
+      note.textContent = step.note;
+      note.className   = `status-note ${step.noteClass}`;
+    }
+
+    // ── Load uploads from Firestore (paths stored, URLs fetched from Supabase) ──
+    async function loadUploads() {
+      const snap = await db.collection('clients').doc(uid).collection('uploads').orderBy('uploadedAt','desc').get();
+      const list = document.getElementById('uploadList');
+      if (snap.empty) {
+        list.innerHTML = `<div class="empty"><div class="empty-icon">📄</div><div class="empty-text">No documents uploaded yet.<br>Use the area above to upload.</div></div>`;
+        return;
+      }
+      const items = await Promise.all(snap.docs.map(async doc => {
+        const d   = doc.data();
+        let url   = '';
+        try { url = await supabase.getSignedUrl('client-uploads', d.storagePath); } catch(e) {}
+        return fileItemHTML(doc.id, d.name, d.size, d.uploadedAt?.toDate(), url, true);
+      }));
+      list.innerHTML = items.join('');
+    }
+
+    // ── Load deliverables ──
+    async function loadDeliverables() {
+      const snap = await db.collection('clients').doc(uid).collection('deliverables').orderBy('uploadedAt','desc').get();
+      const list = document.getElementById('deliverList');
+      if (snap.empty) {
+        list.innerHTML = `<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No deliverables yet.<br>They'll appear here when ready.</div></div>`;
+        return;
+      }
+      const items = await Promise.all(snap.docs.map(async doc => {
+        const d   = doc.data();
+        let url   = '';
+        try { url = await supabase.getSignedUrl('deliverables', d.storagePath); } catch(e) {}
+        return fileItemHTML(doc.id, d.name, d.size, d.uploadedAt?.toDate(), url, false, d.description);
+      }));
+      list.innerHTML = items.join('');
+    }
+
+    function fileItemHTML(id, name, size, date, url, canDelete, desc) {
+      const ext = (name.split('.').pop() || '').toLowerCase();
+      const extClass = ext==='pdf'?'ext-pdf':['xlsx','xls','csv'].includes(ext)?'ext-xlsx':['doc','docx'].includes(ext)?'ext-doc':['jpg','jpeg','png','webp'].includes(ext)?'ext-img':'ext-other';
+      const dateStr = date ? date.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}) : '';
+      const sizeStr = size ? `${(size/1024/1024).toFixed(1)} MB` : '';
+      return `<div class="file-item" id="fi-${id}">
+        <div class="file-ext ${extClass}">${ext.toUpperCase().slice(0,4)}</div>
+        <div class="file-info">
+          <div class="file-name" title="${name}">${name}</div>
+          <div class="file-meta">${[sizeStr,dateStr,desc].filter(Boolean).join(' · ')}</div>
+        </div>
+        ${url ? `<a href="${url}" target="_blank" class="btn-dl">Download</a>` : ''}
+        ${canDelete ? `<button class="btn-del" title="Delete" onclick="deleteFile('${id}','${name.replace(/'/g,"\\'")}')">✕</button>` : ''}
+      </div>`;
+    }
+
+    // ── File upload via Supabase ──
+    document.getElementById('fileInput').addEventListener('change', e => uploadFiles(e.target.files));
+    const dz = document.getElementById('dropZone');
+    dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('over'); });
+    dz.addEventListener('dragleave', () => dz.classList.remove('over'));
+    dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('over'); uploadFiles(e.dataTransfer.files); });
+
+    async function uploadFiles(files) {
+      for (const file of files) {
+        if (file.size > 20 * 1024 * 1024) { showToast(`"${file.name}" is too large (max 20 MB).`, true); continue; }
+        await uploadSingleFile(file);
+      }
+    }
+
+    async function uploadSingleFile(file) {
+      const pw   = document.getElementById('progressWrap');
+      const fill = document.getElementById('progressFill');
+      const lbl  = document.getElementById('progressLabel');
+      pw.classList.add('on');
+      lbl.textContent  = `Uploading "${file.name}"…`;
+      fill.style.width = '10%';
+
+      try {
+        // Upload to Supabase Storage
+        const storagePath = await supabase.uploadFile('client-uploads', uid, file);
+        fill.style.width  = '80%';
+
+        // Save metadata to Firestore
+        await db.collection('clients').doc(uid).collection('uploads').add({
+          name: file.name,
+          size: file.size,
+          storagePath,
+          uploadedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        });
+
+        fill.style.width = '100%';
+        showToast(`"${file.name}" uploaded successfully.`);
+        loadUploads();
+      } catch (err) {
+        console.error(err);
+        showToast(`Upload failed: ${err.message}`, true);
+      } finally {
+        pw.classList.remove('on');
+        document.getElementById('fileInput').value = '';
+      }
+    }
+
+    // ── Delete uploaded file ──
+    async function deleteFile(docId, name) {
+      if (!confirm(`Delete "${name}"? This cannot be undone.`)) return;
+      try {
+        const docSnap = await db.collection('clients').doc(uid).collection('uploads').doc(docId).get();
+        if (docSnap.exists && docSnap.data().storagePath) {
+          await supabase.deleteFile('client-uploads', docSnap.data().storagePath);
+        }
+        await db.collection('clients').doc(uid).collection('uploads').doc(docId).delete();
+        showToast(`"${name}" deleted.`);
+        loadUploads();
+      } catch (err) {
+        showToast('Delete failed. Please try again.', true);
+      }
+    }
+
+    async function signOut() { await auth.signOut(); window.location.href = 'login.html'; }
+
+    let toastTimer;
+    function showToast(msg, isErr = false) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.className = `toast on${isErr ? ' err' : ''}`;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('on'), 3500);
+    }
+  </script>
+</body>
+</html>
