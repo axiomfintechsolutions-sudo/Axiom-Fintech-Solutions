@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey:            "AIzaSyCw2LwFPrlZ9jFTHgliFbaH41bopKjJ3Qw",
   authDomain:        "axiom-client-portal.firebaseapp.com",
   projectId:         "axiom-client-portal",
-  storageBucket:     "YOUR_PROJECT_ID.appspot.com",
+  storageBucket:     "",
   messagingSenderId: "1074823413540",
   appId:             "1:1074823413540:web:39e55a8b30da23aae4fdb1"
 };
