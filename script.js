@@ -557,6 +557,23 @@ function fixMobileOverflow() {
 
 
 /* ══════════════════════════════════════════════════════════
+   HERO SLIDESHOW — Rotate background images
+   ══════════════════════════════════════════════════════════ */
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length < 2) return;
+
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 6000); // change image every 6 seconds
+}
+
+
+/* ══════════════════════════════════════════════════════════
    15. INIT — Run everything on DOM ready
    ══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -573,6 +590,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickySubNav();
   initServicesHeroTags();
   initProcessCards();
+  initHeroSlideshow(); // ← ADD THIS LINE
 });
 /* ══════════════════════════════════════════════════════════
    16. Newsletter Subscription
