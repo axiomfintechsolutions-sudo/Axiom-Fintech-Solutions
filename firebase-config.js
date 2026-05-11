@@ -4,12 +4,13 @@
 //  Get them from: Firebase Console → Project Settings → Your Apps → Web
 // ═══════════════════════════════════════════════════════════════
 const firebaseConfig = {
-  apiKey:            "AIzaSyCw2LwFPrlZ9jFTHgliFbaH41bopKjJ3Qw",
-  authDomain:        "axiom-client-portal.firebaseapp.com",
-  projectId:         "axiom-client-portal",
-  storageBucket:     "axiom-client-portal.firebasestorage.app",
+  apiKey: "AIzaSyCw2LwFPrlZ9jFTHgliFbaH41bopKjJ3Qw",
+  authDomain: "axiom-client-portal.firebaseapp.com",
+  projectId: "axiom-client-portal",
+  storageBucket: "axiom-client-portal.firebasestorage.app",
   messagingSenderId: "1074823413540",
-  appId:             "1:1074823413540:web:39e55a8b30da23aae4fdb1"
+  appId: "1:1074823413540:web:39e55a8b30da23aae4fdb1",
+  measurementId: "G-G1YFPRVG30"
 };
 
 // ── Admin emails ─────────────────────────────────────────────────
