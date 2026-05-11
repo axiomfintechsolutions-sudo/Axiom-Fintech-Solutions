@@ -31,6 +31,7 @@
    24. Responsive Breakpoints
    25. Accessibility
    26. Newsletter Subscription
+   27. HERO SLIDESHOW + TEXT ANIMATION
    =========================================================== */
 
 
@@ -1638,4 +1639,48 @@ button, select { font-family: inherit; cursor: pointer; }
   font-size: 15px;
   color: #ffffff;
   margin: 0;
+}
+
+
+
+/* ══════════════════════════════════════════════════════════
+   27. HERO SLIDESHOW + TEXT ANIMATION
+   ══════════════════════════════════════════════════════════ */
+
+/* Stack slides absolutely inside .hero-bg */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Word-by-word title reveal */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(36px);
+  animation: wordReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-word:nth-child(1) { animation-delay: 0.3s; }
+.hero-word:nth-child(2) { animation-delay: 0.5s; }
+.hero-word:nth-child(3) { animation-delay: 0.7s; }
+.hero-word:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes wordReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ken Burns subtle zoom on each slide */
+.hero-slide.active {
+  animation: kenBurns 8s ease-in-out forwards;
+}
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
 }
