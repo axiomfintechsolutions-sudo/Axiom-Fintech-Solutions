@@ -64,6 +64,7 @@
   --clr-dark:         #000000;
   --clr-green:        #c9a84c;
   --clr-amber:        #e8c97a;
+  --clr-black:        #000008; 
 
   /* Border Radius */
   --radius-sm:        6px;
@@ -487,7 +488,7 @@ button, select { font-family: inherit; cursor: pointer; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--clr-accent);
+  color: var(--clr-black);
   background: rgba(201,168,76,0.10);
   border: 1px solid rgba(201,168,76,0.30);
   border-radius: var(--radius-full);
