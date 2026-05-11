@@ -1,39 +1,34 @@
-// ═══════════════════════════════════════════════════════════════
-//  AXIOM FINTECH — CLIENT PORTAL · Firebase Configuration
-//  Replace the values below with your actual Firebase project config.
-//  Get them from: Firebase Console → Project Settings → Your Apps → Web
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
+//  AXIOM FINTECH — Firebase + Supabase Configuration
+// ═══════════════════════════════════════════════════════
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCw2LwFPrlZ9jFTHgliFbaH41bopKjJ3Qw",
-  authDomain: "axiom-client-portal.firebaseapp.com",
-  projectId: "axiom-client-portal",
-  storageBucket: "axiom-client-portal.firebasestorage.app",
+  apiKey:            "AIzaSyCw2LwFPrlZ9jFTHgliFbaH41bopKjJ3Qw",
+  authDomain:        "axiom-client-portal.firebaseapp.com",
+  projectId:         "axiom-client-portal",
+  storageBucket:     "axiom-client-portal.firebasestorage.app",
   messagingSenderId: "1074823413540",
-  appId: "1:1074823413540:web:39e55a8b30da23aae4fdb1",
-  measurementId: "G-G1YFPRVG30"
+  appId:             "1:1074823413540:web:39e55a8b30da23aae4fdb1",
+  measurementId:     "G-G1YFPRVG30"
 };
 
-// ── Admin emails ─────────────────────────────────────────────────
-// Only these email addresses can access the Admin Panel (admin.html).
+// Admin emails — only these can access admin.html
 const ADMIN_EMAILS = [
   'axiomfintechsolutions@gmail.com'
 ];
 
-// ── Firebase Initialization ───────────────────────────────────────
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db   = firebase.firestore();
-// NOTE: Firebase Storage is NOT used — we use Supabase Storage instead.
 
-// ── Supabase Configuration (used for file storage only) ───────────
-// Auth + Firestore remain on Firebase above.
+// ── Supabase (file storage only) ─────────────────────
 const SUPABASE_URL  = "https://iuqxtlwfefkojdgddzgq.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1cXh0bHdmZWZrb2pkZ2RkemdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjI5MTIsImV4cCI6MjA5NDAzODkxMn0.I943p5aXxABKk_G32cgfIQgCae8ulf-uhZ9rYa_SmXo";
 
-// ── Supabase Storage Helpers ──────────────────────────────────────
 const supabase = {
 
-  // Upload a file to a bucket under a user-scoped path
+  // Upload file → returns storage path
   async uploadFile(bucket, uid, file) {
     const path = `${uid}/${Date.now()}_${file.name}`;
     const res  = await fetch(`${SUPABASE_URL}/storage/v1/object/${bucket}/${path}`, {
@@ -52,7 +47,7 @@ const supabase = {
     return path;
   },
 
-  // Get a signed download URL (valid for 1 hour)
+  // Get signed download URL (1 hour) — FIX: don't double-prefix /storage/v1
   async getSignedUrl(bucket, path) {
     const res = await fetch(`${SUPABASE_URL}/storage/v1/object/sign/${bucket}/${path}`, {
       method:  'POST',
@@ -64,10 +59,11 @@ const supabase = {
     });
     if (!res.ok) throw new Error('Could not generate download URL');
     const data = await res.json();
-    return `${SUPABASE_URL}/storage/v1${data.signedURL}`;
+    // data.signedURL already starts with /storage/v1/...
+    return `${SUPABASE_URL}${data.signedURL}`;
   },
 
-  // Delete a file from a bucket
+  // Delete file from bucket
   async deleteFile(bucket, path) {
     const res = await fetch(`${SUPABASE_URL}/storage/v1/object/${bucket}/${path}`, {
       method:  'DELETE',
