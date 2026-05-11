@@ -502,7 +502,7 @@ button, select { font-family: inherit; cursor: pointer; }
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--clr-white);
+  color: var(--clr-Black);
   margin-bottom: 24px;
   animation: heroFadeIn 1s 0.25s ease both;
   word-break: break-word;
