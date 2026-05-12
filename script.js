@@ -607,8 +607,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let shown = false;
 
+  // ── Check 24hr cooldown ──
+  function isDismissed() {
+    const dismissedAt = localStorage.getItem('newsletter_dismissed');
+    if (!dismissedAt) return false;
+    const hoursPassed = (Date.now() - parseInt(dismissedAt)) / (1000 * 60 * 60);
+    return hoursPassed < 24;
+  }
+
   function showPopup() {
-    if (shown) return;
+    if (shown || isDismissed()) return;
     shown = true;
     overlay.classList.add('active');
     setTimeout(() => popup.classList.add('active'), 10);
@@ -621,6 +629,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  function dismissPopup() {
+    // Save dismiss time to localStorage
+    localStorage.setItem('newsletter_dismissed', Date.now().toString());
+    hidePopup();
+  }
+
   // Trigger at 20% scroll
   window.addEventListener('scroll', function () {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -628,10 +642,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if ((scrollTop / docHeight) >= 0.20) showPopup();
   });
 
-  overlay.addEventListener('click', hidePopup);
-  closeBtn.addEventListener('click', hidePopup);
+  // Close button → 24hr cooldown
+  closeBtn.addEventListener('click', dismissPopup);
+
+  // Backdrop click → 24hr cooldown
+  overlay.addEventListener('click', dismissPopup);
+
+  // Escape key → 24hr cooldown
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') hidePopup();
+    if (e.key === 'Escape') dismissPopup();
   });
 
   // Submit
@@ -650,6 +669,8 @@ document.addEventListener('DOMContentLoaded', () => {
       body: JSON.stringify({ email })
     })
     .then(() => {
+      // After subscribing, never show again
+      localStorage.setItem('newsletter_dismissed', (Date.now() + 1000 * 60 * 60 * 24 * 365).toString());
       emailInput.style.display = 'none';
       submitBtn.style.display  = 'none';
       success.classList.add('show');
@@ -662,7 +683,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 })();
-
 /* ══════════════════════════════════════════════════════════
    EMAILJS SETUP GUIDE
    ══════════════════════════════════════════════════════════
