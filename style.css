@@ -329,14 +329,14 @@ button, select { font-family: inherit; cursor: pointer; }
 }
 
 .logo-img {
-  width: 52px; height: 52px;
+  width: 70px; height: 70px;
   border-radius: var(--radius-sm);
   object-fit: contain;
 }
 
 .logo-name {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--clr-accent);
   letter-spacing: -0.01em;
