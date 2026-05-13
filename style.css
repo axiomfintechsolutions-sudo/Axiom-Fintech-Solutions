@@ -1273,6 +1273,11 @@ button, select { font-family: inherit; cursor: pointer; }
 .industries-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
 
 
+.industries-nav-link {
+  flex-shrink: 0; /* ← add this */
+  /* ...rest of your existing properties unchanged */
+}
+
 /* ══════════════════════════════════════════════════════════
    22. PORTFOLIO PAGE
    ══════════════════════════════════════════════════════════ */
