@@ -1227,7 +1227,17 @@ button, select { font-family: inherit; cursor: pointer; }
 .industries-hero-tag:hover { background: var(--clr-accent); border-color: var(--clr-accent); color: var(--clr-dark); }
 
 .industries-nav-strip { background: var(--clr-surface); border-bottom: 1px solid var(--clr-border); position: sticky; top: var(--nav-h); z-index: 90; }
-.industries-nav-inner { display: flex; align-items: center; max-width: var(--container); margin: 0 auto; padding: 0 24px; overflow-x: auto; scrollbar-width: none; }
+.industries-nav-inner {
+  display: flex;
+  align-items: center;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
 .industries-nav-inner::-webkit-scrollbar { display: none; }
 .industries-nav-link { display: flex; align-items: center; gap: 8px; padding: 16px 18px; font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--clr-muted); white-space: nowrap; border-bottom: 2px solid transparent; transition: all var(--transition); text-decoration: none; }
 .industries-nav-link:hover { color: var(--clr-white); }
@@ -1273,10 +1283,6 @@ button, select { font-family: inherit; cursor: pointer; }
 .industries-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
 
 
-.industries-nav-link {
-  flex-shrink: 0; /* ← add this */
-  /* ...rest of your existing properties unchanged */
-}
 
 /* ══════════════════════════════════════════════════════════
    22. PORTFOLIO PAGE
